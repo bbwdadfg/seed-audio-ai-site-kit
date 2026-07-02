@@ -9,8 +9,8 @@
 
 | Status | Count |
 | --- | ---: |
-| blocked_credentials | 1 |
 | planned | 3 |
+| published | 1 |
 | verified | 16 |
 
 ## Published Links
@@ -32,6 +32,7 @@
 | nuget | `SeedAudioAISiteKit` | `0.1.0` | <https://www.nuget.org/packages/SeedAudioAISiteKit/0.1.0> | NuGet registration API returned v0.1.0 with project URL and description |
 | cocoapods | `SeedAudioAISiteKit` | `0.1.0` | <https://cocoapods.org/pods/SeedAudioAISiteKit> | CocoaPods public page returned v0.1.0 with homepage, GitHub repo, and README links |
 | luarocks | `seed-audio-ai-site-kit` | `0.1.0-1` | <https://luarocks.org/modules/bbwdadfg/seed-audio-ai-site-kit> | LuaRocks public page returned 0.1.0-1 with homepage link |
+| cpan_metacpan | `Seed-Audio-AI-SiteKit` | `0.1.0` | <https://metacpan.org/release/Seed-Audio-AI-SiteKit> | PAUSE browser upload reported file copied to incoming and query succeeded; MetaCPAN API still returned 404 while indexing is pending |
 | github_packages | `@bbwdadfg/seed-audio-ai-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/seed-audio-ai-site-kit> | Unauthenticated GitHub Packages page returned HTTP 200 for the npm package |
 
 ## Blocked Or Follow-Up
@@ -39,7 +40,6 @@
 | Platform | Status | Reason |
 | --- | --- | --- |
 | maven_central_javadoc | `planned` | Maven Central release not attempted in this pass |
-| cpan_metacpan | `blocked_credentials` | PAUSE upload token returned 401 Unauthorized |
 | chocolatey | `planned` | Chocolatey package not prepared in this pass |
 | gitlab_package_registry | `planned` | GitLab package registry not attempted because no GitLab project/namespace was prepared in this pass |
 
@@ -47,12 +47,12 @@
 
 - Tokens were read from macOS Keychain or platform credential stores only at publish time.
 - Temporary npmrc, PAUSE config, Maven settings, and generated package files were removed or avoided.
-- The PAUSE token is saved in Keychain as requested; it is not written to records or repository files.
+- The PAUSE token remains saved in Keychain, but CLI upload currently rejects it; browser session upload was used instead.
 - The JSR publish token was read from Keychain for the successful publish and is not written to records.
 
 ## Follow-Up Queue
 
-- cpan_metacpan: PAUSE upload token currently returns 401; user should verify token upload permission or generate a new upload-capable token.
+- cpan_metacpan: recheck MetaCPAN API/page after PAUSE indexing; mark verified when public release appears.
 - maven_central_javadoc: complete signed Central Portal publish flow.
 - chocolatey: prepare real CLI/helper package and submit for review.
 - gitlab_package_registry: prepare GitLab project/namespace target before publish.

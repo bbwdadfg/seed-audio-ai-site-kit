@@ -447,9 +447,9 @@
     },
     {
       "platform": "cpan_metacpan",
-      "status": "blocked_credentials",
+      "status": "published",
       "artifact_type": "perl_distribution",
-      "automation_level": "automated_with_token",
+      "automation_level": "manual_browser_upload_via_chrome_extension",
       "package": "Seed-Audio-AI-SiteKit",
       "version": "0.1.0",
       "public_url": "https://metacpan.org/release/Seed-Audio-AI-SiteKit",
@@ -459,18 +459,19 @@
         "package_metadata",
         "repository"
       ],
-      "credential_status": "keychain_credentials_rejected",
-      "blocked_reason": "PAUSE upload token returned 401 Unauthorized",
+      "credential_status": "browser_session_used; keychain_token_rejected_for_cli",
+      "blocked_reason": "",
       "verification": {
-        "method": "cpan_upload_response",
-        "result": "cpan-upload built the tarball, but PAUSE returned 401 for both full generated token and token without username prefix",
-        "checked_at": "2026-07-02T12:15:00Z"
+        "method": "pause_browser_upload_result",
+        "result": "PAUSE browser upload reported file copied to incoming and query succeeded; MetaCPAN API still returned 404 while indexing is pending",
+        "checked_at": "2026-07-02T12:35:00Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
-        "PAUSE username and generated token are stored in Keychain for reuse, but the current token is not accepted for upload"
+        "Uploaded via logged-in PAUSE Chrome session after cpan-upload token authentication returned 401",
+        "MetaCPAN indexing can take time; recheck the API/page before marking verified"
       ]
     },
     {
