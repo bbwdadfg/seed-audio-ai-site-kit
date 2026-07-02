@@ -682,7 +682,7 @@
     },
     {
       "platform": "open_vsx",
-      "status": "submitted",
+      "status": "verified",
       "artifact_type": "vscode_compatible_extension",
       "automation_level": "semi_auto_review",
       "package": "bbwdadfg.seed-audio-ai-pwa-toolkit",
@@ -692,14 +692,19 @@
       "link_surfaces_verified": [
         "package_json_homepage",
         "repository",
-        "README.md"
+        "README.md",
+        "open_vsx_api",
+        "marketplace_page",
+        "homepage_link",
+        "repository_link",
+        "downloadable_vsix"
       ],
       "credential_status": "keychain_token_used",
-      "blocked_reason": "Open VSX CLI accepted the publish, but the public API still returns 404 and search does not list the extension yet. Wait for indexing/review, then mark verified only after the API/page exposes the extension metadata.",
+      "blocked_reason": "",
       "verification": {
-        "method": "ovsx_publish_and_public_api_probe",
-        "result": "npm test passed; vsce packaged seed-audio-ai-pwa-toolkit-0.1.0.vsix; ovsx publish returned Published bbwdadfg.seed-audio-ai-pwa-toolkit v0.1.0 using the Keychain token; Open VSX API still returned HTTP 404 immediately after publishing, so this is submitted pending indexing/review.",
-        "checked_at": "2026-07-02T17:46:15Z"
+        "method": "open_vsx_api",
+        "result": "Open VSX API returned HTTP 200 for bbwdadfg.seed-audio-ai-pwa-toolkit version 0.1.0 with homepage https://seedaud.io/, repository https://github.com/bbwdadfg/seed-audio-ai-site-kit.git, downloadable=true, and VSIX download URL.",
+        "checked_at": "2026-07-02T17:58:00Z"
       },
       "cleanup": [
         "Open VSX token remains in macOS Keychain for reuse; no secret recorded in files"
@@ -724,17 +729,18 @@
         "pypi_sdist"
       ],
       "credential_status": "no_credentials_required_for_local_recipe; github_pr_review_required_for_publish",
-      "blocked_reason": "Conda-forge staged-recipes PR is open, linter passed, but Azure staged-recipes builds failed on linux_64, osx_64, and win_64. This needs recipe/build fix before maintainer review can proceed; mark verified only after feedstock or Anaconda package page exists.",
+      "blocked_reason": "Conda-forge staged-recipes PR is open. A recipe patch was pushed in commit 67c24b9902 to fix the PyPI sdist license metadata build error; conda-forge CI rerun is pending. Mark verified only after feedstock or Anaconda package page exists.",
       "verification": {
-        "method": "github_pr_checks",
-        "result": "PR #34033 is open and mergeable; conda-forge linter passed, but staged-recipes Azure build checks failed on linux_64, osx_64, win_64, and build status.",
-        "checked_at": "2026-07-02T16:38:00Z"
+        "method": "github_pr_checks_and_local_patched_sdist_install",
+        "result": "Azure logs showed pip metadata generation failed because pyproject.toml project.license = \"MIT\" was rejected. Pushed staged-recipes commit 67c24b9902 adding pyproject-license.patch; local patched sdist install with --no-build-isolation and import/URL tests passed. PR #34033 CI rerun is pending.",
+        "checked_at": "2026-07-02T17:59:00Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
-        "Local rattler build had network/tooling issues, so final validation is delegated to staged-recipes CI and maintainer review."
+        "Local rattler build had network/tooling issues, so final validation is delegated to staged-recipes CI and maintainer review.",
+        "staged-recipes fix commit: bbwdadfg/staged-recipes@67c24b9902"
       ]
     },
     {
@@ -802,13 +808,8 @@
       "owner": "agent/user"
     },
     {
-      "platform": "open_vsx",
-      "reason": "Open VSX CLI accepted the publish, but the public API still returns 404 and search does not list the extension yet. Wait for indexing/review, then mark verified only after the API/page exposes the extension metadata.",
-      "owner": "agent/user"
-    },
-    {
       "platform": "conda_forge",
-      "reason": "Conda-forge staged-recipes PR is open, linter passed, but Azure staged-recipes builds failed on linux_64, osx_64, and win_64. This needs recipe/build fix before maintainer review can proceed; mark verified only after feedstock or Anaconda package page exists.",
+      "reason": "Conda-forge staged-recipes PR is open. A recipe patch was pushed in commit 67c24b9902 to fix the PyPI sdist license metadata build error; conda-forge CI rerun is pending. Mark verified only after feedstock or Anaconda package page exists.",
       "owner": "agent/user"
     },
     {
