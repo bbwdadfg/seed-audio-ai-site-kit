@@ -589,31 +589,37 @@
     },
     {
       "platform": "helm_artifact_hub",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "helm_chart",
       "automation_level": "semi_auto_review",
       "package": "seed-audio-ai-pwa-toolkit",
       "version": "0.1.0",
-      "public_url": "https://github.com/bbwdadfg/seed-audio-ai-pwa-helm-charts",
+      "public_url": "https://artifacthub.io/packages/helm/seed-audio-ai-pwa-helm-charts/seed-audio-ai-pwa-toolkit",
       "repository_url": "https://raw.githubusercontent.com/bbwdadfg/seed-audio-ai-pwa-helm-charts/main",
       "link_surfaces_verified": [
         "Chart.yaml",
         "README.md",
         "helm_index_yaml",
-        "chart_repository"
+        "chart_repository",
+        "artifact_hub_package_page",
+        "artifact_hub_api",
+        "verified_publisher",
+        "homepage_link",
+        "source_link"
       ],
       "credential_status": "gh_auth_used",
-      "blocked_reason": "Artifact Hub repository ownership file is now published with repositoryID 9ec18efa-76cb-4dea-85f7-a2bf87f0369c; Artifact Hub API still returns 404 until repository processing/indexing completes.",
+      "blocked_reason": "",
       "verification": {
-        "method": "artifacthub_repo_ownership_file_and_helm_index",
-        "result": "Published artifacthub-repo.yml to the Helm repo root with repositoryID 9ec18efa-76cb-4dea-85f7-a2bf87f0369c and owner support@seedaud.io; raw GitHub ownership file and Helm index.yaml both returned HTTP 200 and parsed successfully.",
-        "checked_at": "2026-07-02T16:04:45Z"
+        "method": "artifact_hub_package_api",
+        "result": "Artifact Hub package API returned seed-audio-ai-pwa-toolkit version 0.1.0 from repository seed-audio-ai-pwa-helm-charts with verified_publisher=true and links to https://seedaud.io/, https://seedaud.io/text-to-speech/, and the GitHub source repository.",
+        "checked_at": "2026-07-02T16:35:00Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
-        "Artifact Hub UI showed the repository as not processed yet; recheck after the scheduled processing window."
+        "Artifact Hub UI showed the repository as not processed yet; recheck after the scheduled processing window.",
+        "Artifact Hub indexing completed after repository ownership metadata was published."
       ]
     },
     {
@@ -717,11 +723,11 @@
         "pypi_sdist"
       ],
       "credential_status": "no_credentials_required_for_local_recipe; github_pr_review_required_for_publish",
-      "blocked_reason": "Conda-forge staged-recipes PR is open and awaiting CI/maintainer review; mark verified only after feedstock or Anaconda package page exists.",
+      "blocked_reason": "Conda-forge staged-recipes PR is open, linter passed, but Azure staged-recipes builds failed on linux_64, osx_64, and win_64. This needs recipe/build fix before maintainer review can proceed; mark verified only after feedstock or Anaconda package page exists.",
       "verification": {
-        "method": "staged_recipes_pull_request",
-        "result": "Created conda-forge/staged-recipes PR #34033 for seed-audio-ai-site-kit 0.1.0 from PyPI using sha256 e68b32868bf391aa065c0903fd271717cfbc0581e6d7777afef042d7e5d780c1.",
-        "checked_at": "2026-07-02T15:38:45Z"
+        "method": "github_pr_checks",
+        "result": "PR #34033 is open and mergeable; conda-forge linter passed, but staged-recipes Azure build checks failed on linux_64, osx_64, win_64, and build status.",
+        "checked_at": "2026-07-02T16:38:00Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
@@ -794,18 +800,13 @@
       "owner": "agent/user"
     },
     {
-      "platform": "helm_artifact_hub",
-      "reason": "Artifact Hub repository ownership file is now published with repositoryID 9ec18efa-76cb-4dea-85f7-a2bf87f0369c; Artifact Hub API still returns 404 until repository processing/indexing completes.",
-      "owner": "agent/user"
-    },
-    {
       "platform": "open_vsx",
       "reason": "Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable.",
       "owner": "user"
     },
     {
       "platform": "conda_forge",
-      "reason": "Conda-forge staged-recipes PR is open and awaiting CI/maintainer review; mark verified only after feedstock or Anaconda package page exists.",
+      "reason": "Conda-forge staged-recipes PR is open, linter passed, but Azure staged-recipes builds failed on linux_64, osx_64, and win_64. This needs recipe/build fix before maintainer review can proceed; mark verified only after feedstock or Anaconda package page exists.",
       "owner": "agent/user"
     },
     {

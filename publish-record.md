@@ -3,7 +3,7 @@
 - Site: <https://seedaud.io>
 - Source repo: <https://github.com/bbwdadfg/seed-audio-ai-site-kit>
 - Started: 2026-07-02T11:15:00Z
-- Finished: pending Chocolatey, Artifact Hub indexing, Conda-forge review, CRAN email confirmation, Open VSX credentials, and Flathub review/tooling
+- Finished: pending Chocolatey review, Conda-forge CI fix/review, CRAN email confirmation, Open VSX credentials, and Flathub review/tooling
 
 ## Summary
 
@@ -13,8 +13,7 @@
 | blocked_review | 1 |
 | dry_run_passed | 1 |
 | submitted | 2 |
-| published | 1 |
-| verified | 22 |
+| verified | 23 |
 
 ## Published Links
 
@@ -41,10 +40,10 @@
 | github_packages | `@bbwdadfg/seed-audio-ai-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/seed-audio-ai-site-kit> | Unauthenticated GitHub Packages page returned HTTP 200 for the npm package |
 | gitlab_package_registry | `baiwei.chu/seed-audio-ai-site-kit:seed-audio-ai-site-kit` | `0.1.0` | <https://gitlab.com/baiwei.chu/seed-audio-ai-site-kit/-/packages/63344425> | GitLab public project and package pages returned HTTP 200; unauthenticated artifact download SHA256 matched local archive 3dbbe2b4cfbda2374656b4747b629cb7605a739a4810142e4bc7de19943e9e6c |
 | homebrew | `bbwdadfg/tap/seed-audio-ai-pwa-toolkit` | `0.1.0` | <https://github.com/bbwdadfg/homebrew-tap/blob/main/Formula/seed-audio-ai-pwa-toolkit.rb> | brew tap, brew install, brew test, and CLI smoke test returned https://seedaud.io/ for bbwdadfg/tap/seed-audio-ai-pwa-toolkit 0.1.0 |
-| helm_artifact_hub | `seed-audio-ai-pwa-toolkit` | `0.1.0` | <https://github.com/bbwdadfg/seed-audio-ai-pwa-helm-charts> | Published artifacthub-repo.yml to the Helm repo root with repositoryID 9ec18efa-76cb-4dea-85f7-a2bf87f0369c and owner support@seedaud.io; raw GitHub ownership file and Helm index.yaml both returned HTTP 200 and parsed successfully. |
+| helm_artifact_hub | `seed-audio-ai-pwa-toolkit` | `0.1.0` | <https://artifacthub.io/packages/helm/seed-audio-ai-pwa-helm-charts/seed-audio-ai-pwa-toolkit> | Artifact Hub package API returned seed-audio-ai-pwa-toolkit version 0.1.0 from repository seed-audio-ai-pwa-helm-charts with verified_publisher=true and links to https://seedaud.io/, https://seedaud.io/text-to-speech/, and the GitHub source repository. |
 | terraform_registry | `bbwdadfg/seed-audio-ai-pwa-toolkit/null` | `v0.1.0` | <https://registry.terraform.io/modules/bbwdadfg/seed-audio-ai-pwa-toolkit/null/latest> | Imported through HCP Terraform public namespace bbwdadfg from GitHub repo bbwdadfg/terraform-null-seed-audio-ai-pwa-toolkit; Registry API returned HTTP 200 for bbwdadfg/seed-audio-ai-pwa-toolkit/null with version 0.1.0, tag v0.1.0, source repository, README, inputs, outputs, and examples; public module page returned HTTP 200. |
 | ansible_galaxy | `bbwdadfg.seed_audio_ai_pwa_toolkit` | `0.1.0` | <https://galaxy.ansible.com/ui/repo/published/bbwdadfg/seed_audio_ai_pwa_toolkit/> | ansible-galaxy collection build passed; local module call returned Seed Audio AI links; Galaxy publish/import succeeded; public page returned HTTP 200 and API highest_version is 0.1.0. |
-| conda_forge | `seed-audio-ai-site-kit` | `0.1.0` | <https://github.com/conda-forge/staged-recipes/pull/34033> | Created conda-forge/staged-recipes PR #34033 for seed-audio-ai-site-kit 0.1.0 from PyPI using sha256 e68b32868bf391aa065c0903fd271717cfbc0581e6d7777afef042d7e5d780c1. |
+| conda_forge | `seed-audio-ai-site-kit` | `0.1.0` | <https://github.com/conda-forge/staged-recipes/pull/34033> | PR #34033 is open and mergeable; conda-forge linter passed, but staged-recipes Azure build checks failed on linux_64, osx_64, win_64, and build status. |
 
 ## Prepared But Not Public
 
@@ -57,9 +56,8 @@
 | Platform | Status | Reason |
 | --- | --- | --- |
 | chocolatey | `submitted` | Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status |
-| helm_artifact_hub | `published` | Artifact Hub repository ownership file is now published with repositoryID 9ec18efa-76cb-4dea-85f7-a2bf87f0369c; Artifact Hub API still returns 404 until repository processing/indexing completes. |
 | open_vsx | `blocked_credentials` | Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable. |
-| conda_forge | `submitted` | Conda-forge staged-recipes PR is open and awaiting CI/maintainer review; mark verified only after feedstock or Anaconda package page exists. |
+| conda_forge | `submitted` | Conda-forge staged-recipes PR is open, linter passed, but Azure staged-recipes builds failed on linux_64, osx_64, and win_64. This needs recipe/build fix before maintainer review can proceed; mark verified only after feedstock or Anaconda package page exists. |
 | cran | `dry_run_passed` | CRAN upload and Step 2 submission were repeated with maintainer email support@seedaud.io; CRAN says submission is not complete until the maintainer confirms the email. |
 | flathub | `blocked_review` | Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed. |
 
@@ -72,8 +70,7 @@
 ## Follow-Up Queue
 
 - chocolatey: Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status
-- helm_artifact_hub: Artifact Hub repository ownership file is now published with repositoryID 9ec18efa-76cb-4dea-85f7-a2bf87f0369c; Artifact Hub API still returns 404 until repository processing/indexing completes.
 - open_vsx: Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable.
-- conda_forge: Conda-forge staged-recipes PR is open and awaiting CI/maintainer review; mark verified only after feedstock or Anaconda package page exists.
+- conda_forge: Conda-forge staged-recipes PR is open, linter passed, but Azure staged-recipes builds failed on linux_64, osx_64, and win_64. This needs recipe/build fix before maintainer review can proceed; mark verified only after feedstock or Anaconda package page exists.
 - cran: CRAN upload and Step 2 submission were repeated with maintainer email support@seedaud.io; CRAN says submission is not complete until the maintainer confirms the email.
 - flathub: Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed.
