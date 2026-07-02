@@ -3,7 +3,7 @@
 - Site: <https://seedaud.io>
 - Source repo: <https://github.com/bbwdadfg/seed-audio-ai-site-kit>
 - Started: 2026-07-02T11:15:00Z
-- Finished: pending Chocolatey review, Conda-forge CI fix/review, CRAN email confirmation, Open VSX credentials, and Flathub review/tooling
+- Finished: pending Chocolatey review, Conda-forge CI fix/review, CRAN review/indexing, Open VSX credentials, and Flathub review/tooling
 
 ## Summary
 
@@ -11,8 +11,7 @@
 | --- | ---: |
 | blocked_credentials | 1 |
 | blocked_review | 1 |
-| dry_run_passed | 1 |
-| submitted | 2 |
+| submitted | 3 |
 | verified | 23 |
 
 ## Published Links
@@ -49,7 +48,7 @@
 
 | Platform | Status | Verification | Reason |
 | --- | --- | --- | --- |
-| cran | `dry_run_passed` | Rebuilt seedAudioAiPwaToolkit_0.1.0.tar.gz with maintainer support@seedaud.io, R CMD check --as-cran completed with only the standard New submission NOTE, uploaded to CRAN submit, and reached Step 3 maintainer email confirmation. | CRAN upload and Step 2 submission were repeated with maintainer email support@seedaud.io; CRAN says submission is not complete until the maintainer confirms the email. |
+| cran | `submitted` | CRAN Step 3 confirmation page reported the package was successfully uploaded to the CRAN submission team; https://cran.r-project.org/web/packages/seedAudioAiPwaToolkit/index.html still returned HTTP 404, so this is submitted, not verified. | CRAN maintainer confirmation is complete and the package has been submitted to the CRAN team; public CRAN package page still returns 404 until CRAN review/indexing completes. |
 
 ## Blocked Or Manual Follow-Up
 
@@ -58,7 +57,7 @@
 | chocolatey | `submitted` | Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status |
 | open_vsx | `blocked_credentials` | Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable. |
 | conda_forge | `submitted` | Conda-forge staged-recipes PR is open, linter passed, but Azure staged-recipes builds failed on linux_64, osx_64, and win_64. This needs recipe/build fix before maintainer review can proceed; mark verified only after feedstock or Anaconda package page exists. |
-| cran | `dry_run_passed` | CRAN upload and Step 2 submission were repeated with maintainer email support@seedaud.io; CRAN says submission is not complete until the maintainer confirms the email. |
+| cran | `submitted` | CRAN maintainer confirmation is complete and the package has been submitted to the CRAN team; public CRAN package page still returns 404 until CRAN review/indexing completes. |
 | flathub | `blocked_review` | Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed. |
 
 ## Credential Cleanup
@@ -72,5 +71,5 @@
 - chocolatey: Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status
 - open_vsx: Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable.
 - conda_forge: Conda-forge staged-recipes PR is open, linter passed, but Azure staged-recipes builds failed on linux_64, osx_64, and win_64. This needs recipe/build fix before maintainer review can proceed; mark verified only after feedstock or Anaconda package page exists.
-- cran: CRAN upload and Step 2 submission were repeated with maintainer email support@seedaud.io; CRAN says submission is not complete until the maintainer confirms the email.
+- cran: CRAN maintainer confirmation is complete and the package has been submitted to the CRAN team; public CRAN package page still returns 404 until CRAN review/indexing completes.
 - flathub: Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed.

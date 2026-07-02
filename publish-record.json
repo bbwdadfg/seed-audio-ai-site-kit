@@ -738,7 +738,7 @@
     },
     {
       "platform": "cran",
-      "status": "dry_run_passed",
+      "status": "submitted",
       "artifact_type": "r_package",
       "automation_level": "manual_review",
       "package": "seedAudioAiPwaToolkit",
@@ -751,17 +751,18 @@
         "R_package_docs"
       ],
       "credential_status": "no_credentials_required_for_local_check; maintainer_email_confirmation_required_for_submission",
-      "blocked_reason": "CRAN upload and Step 2 submission were repeated with maintainer email support@seedaud.io; CRAN says submission is not complete until the maintainer confirms the email.",
+      "blocked_reason": "CRAN maintainer confirmation is complete and the package has been submitted to the CRAN team; public CRAN package page still returns 404 until CRAN review/indexing completes.",
       "verification": {
-        "method": "cran_upload_step3_waiting_support_confirmation",
-        "result": "Rebuilt seedAudioAiPwaToolkit_0.1.0.tar.gz with maintainer support@seedaud.io, R CMD check --as-cran completed with only the standard New submission NOTE, uploaded to CRAN submit, and reached Step 3 maintainer email confirmation.",
-        "checked_at": "2026-07-02T15:56:07Z"
+        "method": "cran_submit_confirmation_and_public_page_probe",
+        "result": "CRAN Step 3 confirmation page reported the package was successfully uploaded to the CRAN submission team; https://cran.r-project.org/web/packages/seedAudioAiPwaToolkit/index.html still returned HTTP 404, so this is submitted, not verified.",
+        "checked_at": "2026-07-02T16:45:00Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
-        "After support@seedaud.io confirms the CRAN email, update status to submitted and wait for CRAN review."
+        "After support@seedaud.io confirms the CRAN email, update status to submitted and wait for CRAN review.",
+        "User confirmed CRAN Step 3 completion in the browser."
       ]
     },
     {
@@ -811,7 +812,7 @@
     },
     {
       "platform": "cran",
-      "reason": "CRAN upload and Step 2 submission were repeated with maintainer email support@seedaud.io; CRAN says submission is not complete until the maintainer confirms the email.",
+      "reason": "CRAN maintainer confirmation is complete and the package has been submitted to the CRAN team; public CRAN package page still returns 404 until CRAN review/indexing completes.",
       "owner": "agent/user"
     },
     {
