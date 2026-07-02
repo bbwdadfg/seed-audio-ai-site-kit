@@ -12,7 +12,12 @@
   },
   "license": "MIT",
   "main": "src/sitekit.js",
+  "bin": {
+    "seed-audio-ai-pwa-toolkit": "bin/seed-audio-ai-pwa-toolkit.js"
+  },
   "files": [
+    "bin/seed-audio-ai-pwa-toolkit.js",
+    "pwa",
     "src",
     "README.md",
     "LICENSE"
@@ -25,6 +30,6 @@
     "site-kit"
   ],
   "scripts": {
-    "test": "node tests/sitekit.test.js"
+    "test": "node tests/sitekit.test.js && node tests/pwa.test.js"
   }
 }

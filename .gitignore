@@ -2,6 +2,8 @@ node_modules/
 dist/
 target/
 bin/
+!/bin/
+!/bin/seed-audio-ai-pwa-toolkit.js
 obj/
 .build/
 *.gem
