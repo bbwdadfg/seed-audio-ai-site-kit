@@ -729,18 +729,18 @@
         "pypi_sdist"
       ],
       "credential_status": "no_credentials_required_for_local_recipe; github_pr_review_required_for_publish",
-      "blocked_reason": "Conda-forge staged-recipes PR is open. A recipe patch was pushed in commit 67c24b9902 to fix the PyPI sdist license metadata build error; conda-forge CI rerun is pending. Mark verified only after feedstock or Anaconda package page exists.",
+      "blocked_reason": "Conda-forge staged-recipes PR is open. Recipe fixes were pushed in commits 67c24b9902 and a5b5c421f8 to patch PyPI sdist license metadata and provide the declared license_file; conda-forge CI rerun is pending. Mark verified only after feedstock or Anaconda package page exists.",
       "verification": {
         "method": "github_pr_checks_and_local_patched_sdist_install",
-        "result": "Azure logs showed pip metadata generation failed because pyproject.toml project.license = \"MIT\" was rejected. Pushed staged-recipes commit 67c24b9902 adding pyproject-license.patch; local patched sdist install with --no-build-isolation and import/URL tests passed. PR #34033 CI rerun is pending.",
-        "checked_at": "2026-07-02T17:59:00Z"
+        "result": "Azure logs showed the first fix resolved pip metadata generation, then conda-build failed because about/license_file pointed to missing LICENSE. Pushed staged-recipes commit a5b5c421f8 adding the recipe LICENSE file after commit 67c24b9902 added pyproject-license.patch; local patched sdist install with --no-build-isolation and import/URL tests passed. PR #34033 CI rerun is pending.",
+        "checked_at": "2026-07-02T18:04:02Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
         "Local rattler build had network/tooling issues, so final validation is delegated to staged-recipes CI and maintainer review.",
-        "staged-recipes fix commit: bbwdadfg/staged-recipes@67c24b9902"
+        "staged-recipes fix commits: bbwdadfg/staged-recipes@67c24b9902, bbwdadfg/staged-recipes@a5b5c421f8"
       ]
     },
     {
@@ -809,7 +809,7 @@
     },
     {
       "platform": "conda_forge",
-      "reason": "Conda-forge staged-recipes PR is open. A recipe patch was pushed in commit 67c24b9902 to fix the PyPI sdist license metadata build error; conda-forge CI rerun is pending. Mark verified only after feedstock or Anaconda package page exists.",
+      "reason": "Conda-forge staged-recipes PR is open. Recipe fixes were pushed in commits 67c24b9902 and a5b5c421f8 to patch PyPI sdist license metadata and provide the declared license_file; conda-forge CI rerun is pending. Mark verified only after feedstock or Anaconda package page exists.",
       "owner": "agent/user"
     },
     {
