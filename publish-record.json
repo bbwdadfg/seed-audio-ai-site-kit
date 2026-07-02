@@ -339,9 +339,9 @@
     },
     {
       "platform": "maven_central_javadoc",
-      "status": "planned",
+      "status": "published",
       "artifact_type": "maven_artifact",
-      "automation_level": "automated_with_token",
+      "automation_level": "semi_auto_signed",
       "package": "io.github.bbwdadfg:seed-audio-ai-site-kit",
       "version": "0.1.0",
       "public_url": "https://central.sonatype.com/artifact/io.github.bbwdadfg/seed-audio-ai-site-kit",
@@ -354,15 +354,16 @@
       "credential_status": "keychain_token_available",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "Maven Central release not attempted in this pass",
-        "checked_at": "2026-07-02T11:45:00Z"
+        "method": "central_publisher_api",
+        "result": "Central deployment 366a5e69-3cb8-40ba-97c0-d39102ed3cf9 validated and publish API returned 204; Central status is still PUBLISHING and repo1 artifacts are not indexed yet",
+        "checked_at": "2026-07-02T12:55:00Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
-        "Requires Central Portal publishing plugin/signing flow and follow-up verification"
+        "SCM tag maven-v0.1.0 was pushed before deploy",
+        "Recheck repo1 Maven artifacts and javadoc.io before marking verified"
       ]
     },
     {
@@ -447,7 +448,7 @@
     },
     {
       "platform": "cpan_metacpan",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "perl_distribution",
       "automation_level": "manual_browser_upload_via_chrome_extension",
       "package": "Seed-Audio-AI-SiteKit",
@@ -462,23 +463,22 @@
       "credential_status": "browser_session_used; keychain_token_rejected_for_cli",
       "blocked_reason": "",
       "verification": {
-        "method": "pause_browser_upload_result",
-        "result": "PAUSE browser upload reported file copied to incoming and query succeeded; MetaCPAN API still returned 404 while indexing is pending",
-        "checked_at": "2026-07-02T12:35:00Z"
+        "method": "metacpan_release_api",
+        "result": "MetaCPAN API returned Seed-Audio-AI-SiteKit v0.1.0 with homepage and GitHub repository resources",
+        "checked_at": "2026-07-02T12:55:00Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
-        "Uploaded via logged-in PAUSE Chrome session after cpan-upload token authentication returned 401",
-        "MetaCPAN indexing can take time; recheck the API/page before marking verified"
+        "Uploaded through logged-in PAUSE Chrome session after cpan-upload token authentication returned 401"
       ]
     },
     {
       "platform": "chocolatey",
-      "status": "planned",
+      "status": "submitted",
       "artifact_type": "chocolatey_package",
-      "automation_level": "automated_with_token_then_review",
+      "automation_level": "semi_auto_review",
       "package": "seed-audio-ai-site-kit",
       "version": "0.1.0",
       "public_url": "https://community.chocolatey.org/packages/seed-audio-ai-site-kit",
@@ -491,15 +491,15 @@
       "credential_status": "keychain_token_available",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "Chocolatey package not prepared in this pass",
-        "checked_at": "2026-07-02T11:45:00Z"
+        "method": "chocolatey_public_page",
+        "result": "nuget push returned Created and Chocolatey package page returned HTTP 200 with Pending review status and seedaud.io links",
+        "checked_at": "2026-07-02T12:55:00Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
-        "Should only proceed with a real CLI/helper package and community review"
+        "Community validation, verification, scan, and moderation are still pending"
       ]
     },
     {
@@ -532,30 +532,31 @@
     },
     {
       "platform": "gitlab_package_registry",
-      "status": "planned",
-      "artifact_type": "npm_package",
+      "status": "verified",
+      "artifact_type": "gitlab_generic_package",
       "automation_level": "automated_with_token",
-      "package": "seed-audio-ai-site-kit",
+      "package": "baiwei.chu/seed-audio-ai-site-kit:seed-audio-ai-site-kit",
       "version": "0.1.0",
-      "public_url": "",
-      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "public_url": "https://gitlab.com/baiwei.chu/seed-audio-ai-site-kit/-/packages/63344425",
+      "repository_url": "https://gitlab.com/baiwei.chu/seed-audio-ai-site-kit",
       "link_surfaces_verified": [
+        "public_project",
+        "package_page",
         "README.md",
-        "package_metadata",
-        "repository"
+        "generic_artifact_download"
       ],
-      "credential_status": "keychain_token_available",
+      "credential_status": "keychain_token_used",
       "blocked_reason": "",
       "verification": {
-        "method": "not_run",
-        "result": "GitLab package registry not attempted because no GitLab project/namespace was prepared in this pass",
-        "checked_at": "2026-07-02T11:45:00Z"
+        "method": "gitlab_api_and_public_download",
+        "result": "GitLab public project and package pages returned HTTP 200; unauthenticated artifact download SHA256 matched local archive 3dbbe2b4cfbda2374656b4747b629cb7605a739a4810142e4bc7de19943e9e6c",
+        "checked_at": "2026-07-02T12:55:00Z"
       },
       "cleanup": [
-        "temporary token/config files removed or avoided; no secrets recorded"
+        "temporary package archive removed; no secrets recorded"
       ],
       "notes": [
-        "Requires GitLab project/repo target before publish"
+        "Created public GitLab project under baiwei.chu and uploaded a Generic Package artifact"
       ]
     }
   ],

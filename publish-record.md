@@ -9,9 +9,9 @@
 
 | Status | Count |
 | --- | ---: |
-| planned | 3 |
 | published | 1 |
-| verified | 16 |
+| submitted | 1 |
+| verified | 18 |
 
 ## Published Links
 
@@ -29,30 +29,28 @@
 | clojars | `net.clojars.tianwei/seed-audio-ai-site-kit` | `0.1.0` | <https://clojars.org/net.clojars.tianwei/seed-audio-ai-site-kit> | Clojars page and repo POM returned homepage/source links |
 | docker_hub | `baiwei111/seed-audio-ai-site-kit` | `0.1.0` | <https://hub.docker.com/r/baiwei111/seed-audio-ai-site-kit> | Docker Registry manifest verified for tag 0.1.0 with digest sha256:f4cdd0a5b30205c7f57a9b5d7bf6f84ea8f8e327bb6ce1d3a627e11573c7f3ab |
 | jsr | `@bbwdadfg/seed-audio-ai-site-kit` | `0.1.0` | <https://jsr.io/@bbwdadfg/seed-audio-ai-site-kit> | JSR meta API returned latest 0.1.0 and public package page is live |
+| maven_central_javadoc | `io.github.bbwdadfg:seed-audio-ai-site-kit` | `0.1.0` | <https://central.sonatype.com/artifact/io.github.bbwdadfg/seed-audio-ai-site-kit> | Central deployment 366a5e69-3cb8-40ba-97c0-d39102ed3cf9 validated and publish API returned 204; Central status is still PUBLISHING and repo1 artifacts are not indexed yet |
 | nuget | `SeedAudioAISiteKit` | `0.1.0` | <https://www.nuget.org/packages/SeedAudioAISiteKit/0.1.0> | NuGet registration API returned v0.1.0 with project URL and description |
 | cocoapods | `SeedAudioAISiteKit` | `0.1.0` | <https://cocoapods.org/pods/SeedAudioAISiteKit> | CocoaPods public page returned v0.1.0 with homepage, GitHub repo, and README links |
 | luarocks | `seed-audio-ai-site-kit` | `0.1.0-1` | <https://luarocks.org/modules/bbwdadfg/seed-audio-ai-site-kit> | LuaRocks public page returned 0.1.0-1 with homepage link |
-| cpan_metacpan | `Seed-Audio-AI-SiteKit` | `0.1.0` | <https://metacpan.org/release/Seed-Audio-AI-SiteKit> | PAUSE browser upload reported file copied to incoming and query succeeded; MetaCPAN API still returned 404 while indexing is pending |
+| cpan_metacpan | `Seed-Audio-AI-SiteKit` | `0.1.0` | <https://metacpan.org/release/Seed-Audio-AI-SiteKit> | MetaCPAN API returned Seed-Audio-AI-SiteKit v0.1.0 with homepage and GitHub repository resources |
 | github_packages | `@bbwdadfg/seed-audio-ai-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/seed-audio-ai-site-kit> | Unauthenticated GitHub Packages page returned HTTP 200 for the npm package |
+| gitlab_package_registry | `baiwei.chu/seed-audio-ai-site-kit:seed-audio-ai-site-kit` | `0.1.0` | <https://gitlab.com/baiwei.chu/seed-audio-ai-site-kit/-/packages/63344425> | GitLab public project and package pages returned HTTP 200; unauthenticated artifact download SHA256 matched local archive 3dbbe2b4cfbda2374656b4747b629cb7605a739a4810142e4bc7de19943e9e6c |
 
-## Blocked Or Follow-Up
+## Submitted Or Follow-Up
 
 | Platform | Status | Reason |
 | --- | --- | --- |
-| maven_central_javadoc | `planned` | Maven Central release not attempted in this pass |
-| chocolatey | `planned` | Chocolatey package not prepared in this pass |
-| gitlab_package_registry | `planned` | GitLab package registry not attempted because no GitLab project/namespace was prepared in this pass |
+| chocolatey | `submitted` | nuget push returned Created and Chocolatey package page returned HTTP 200 with Pending review status and seedaud.io links |
 
 ## Credential Cleanup
 
 - Tokens were read from macOS Keychain or platform credential stores only at publish time.
-- Temporary npmrc, PAUSE config, Maven settings, and generated package files were removed or avoided.
-- The PAUSE token remains saved in Keychain, but CLI upload currently rejects it; browser session upload was used instead.
-- The JSR publish token was read from Keychain for the successful publish and is not written to records.
+- Temporary npmrc, PAUSE config, Maven settings, GitLab archive staging, and generated package files were removed or avoided.
+- Maven Central used a temporary settings.xml with server id `central`; it was deleted after deploy.
+- GitLab and Chocolatey tokens were used only in request headers/API-key arguments and are not written to records.
 
 ## Follow-Up Queue
 
-- cpan_metacpan: recheck MetaCPAN API/page after PAUSE indexing; mark verified when public release appears.
-- maven_central_javadoc: complete signed Central Portal publish flow.
-- chocolatey: prepare real CLI/helper package and submit for review.
-- gitlab_package_registry: prepare GitLab project/namespace target before publish.
+- maven_central_javadoc: Central status is PUBLISHING; recheck repo1 Maven artifacts and javadoc.io, then mark verified when public artifacts return HTTP 200.
+- chocolatey: package is public but Pending review; recheck after Chocolatey validation, verification, scan, and moderation finish.
