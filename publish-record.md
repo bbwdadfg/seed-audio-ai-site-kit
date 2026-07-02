@@ -3,15 +3,14 @@
 - Site: <https://seedaud.io>
 - Source repo: <https://github.com/bbwdadfg/seed-audio-ai-site-kit>
 - Started: 2026-07-02T11:15:00Z
-- Finished: pending follow-ups
+- Finished: pending Chocolatey review
 
 ## Summary
 
 | Status | Count |
 | --- | ---: |
-| published | 1 |
 | submitted | 1 |
-| verified | 18 |
+| verified | 19 |
 
 ## Published Links
 
@@ -29,7 +28,7 @@
 | clojars | `net.clojars.tianwei/seed-audio-ai-site-kit` | `0.1.0` | <https://clojars.org/net.clojars.tianwei/seed-audio-ai-site-kit> | Clojars page and repo POM returned homepage/source links |
 | docker_hub | `baiwei111/seed-audio-ai-site-kit` | `0.1.0` | <https://hub.docker.com/r/baiwei111/seed-audio-ai-site-kit> | Docker Registry manifest verified for tag 0.1.0 with digest sha256:f4cdd0a5b30205c7f57a9b5d7bf6f84ea8f8e327bb6ce1d3a627e11573c7f3ab |
 | jsr | `@bbwdadfg/seed-audio-ai-site-kit` | `0.1.0` | <https://jsr.io/@bbwdadfg/seed-audio-ai-site-kit> | JSR meta API returned latest 0.1.0 and public package page is live |
-| maven_central_javadoc | `io.github.bbwdadfg:seed-audio-ai-site-kit` | `0.1.0` | <https://central.sonatype.com/artifact/io.github.bbwdadfg/seed-audio-ai-site-kit> | Central deployment 366a5e69-3cb8-40ba-97c0-d39102ed3cf9 validated and publish API returned 204; Central status is still PUBLISHING and repo1 artifacts are not indexed yet |
+| maven_central_javadoc | `io.github.bbwdadfg:seed-audio-ai-site-kit` | `0.1.0` | <https://central.sonatype.com/artifact/io.github.bbwdadfg/seed-audio-ai-site-kit> | Central deployment 366a5e69-3cb8-40ba-97c0-d39102ed3cf9 is PUBLISHED; repo1 POM, JAR, sources, javadoc, and signatures returned HTTP 200; javadoc.io returned HTTP 200 |
 | nuget | `SeedAudioAISiteKit` | `0.1.0` | <https://www.nuget.org/packages/SeedAudioAISiteKit/0.1.0> | NuGet registration API returned v0.1.0 with project URL and description |
 | cocoapods | `SeedAudioAISiteKit` | `0.1.0` | <https://cocoapods.org/pods/SeedAudioAISiteKit> | CocoaPods public page returned v0.1.0 with homepage, GitHub repo, and README links |
 | luarocks | `seed-audio-ai-site-kit` | `0.1.0-1` | <https://luarocks.org/modules/bbwdadfg/seed-audio-ai-site-kit> | LuaRocks public page returned 0.1.0-1 with homepage link |
@@ -41,7 +40,7 @@
 
 | Platform | Status | Reason |
 | --- | --- | --- |
-| chocolatey | `submitted` | nuget push returned Created and Chocolatey package page returned HTTP 200 with Pending review status and seedaud.io links |
+| chocolatey | `submitted` | Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status |
 
 ## Credential Cleanup
 
@@ -52,5 +51,4 @@
 
 ## Follow-Up Queue
 
-- maven_central_javadoc: Central status is PUBLISHING; recheck repo1 Maven artifacts and javadoc.io, then mark verified when public artifacts return HTTP 200.
-- chocolatey: package is public but Pending review; recheck after Chocolatey validation, verification, scan, and moderation finish.
+- chocolatey: package is public but Pending automated review; recheck after Chocolatey validation, verification, scan, and moderation finish.

@@ -339,7 +339,7 @@
     },
     {
       "platform": "maven_central_javadoc",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "maven_artifact",
       "automation_level": "semi_auto_signed",
       "package": "io.github.bbwdadfg:seed-audio-ai-site-kit",
@@ -354,16 +354,16 @@
       "credential_status": "keychain_token_available",
       "blocked_reason": "",
       "verification": {
-        "method": "central_publisher_api",
-        "result": "Central deployment 366a5e69-3cb8-40ba-97c0-d39102ed3cf9 validated and publish API returned 204; Central status is still PUBLISHING and repo1 artifacts are not indexed yet",
-        "checked_at": "2026-07-02T12:55:00Z"
+        "method": "central_repo1_and_javadoc_io",
+        "result": "Central deployment 366a5e69-3cb8-40ba-97c0-d39102ed3cf9 is PUBLISHED; repo1 POM, JAR, sources, javadoc, and signatures returned HTTP 200; javadoc.io returned HTTP 200",
+        "checked_at": "2026-07-02T13:15:00Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
         "SCM tag maven-v0.1.0 was pushed before deploy",
-        "Recheck repo1 Maven artifacts and javadoc.io before marking verified"
+        "Repo1 POM contains homepage and GitHub SCM links"
       ]
     },
     {
@@ -492,8 +492,8 @@
       "blocked_reason": "",
       "verification": {
         "method": "chocolatey_public_page",
-        "result": "nuget push returned Created and Chocolatey package page returned HTTP 200 with Pending review status and seedaud.io links",
-        "checked_at": "2026-07-02T12:55:00Z"
+        "result": "Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status",
+        "checked_at": "2026-07-02T13:15:00Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
