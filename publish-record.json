@@ -14,9 +14,585 @@
       "https://seedaud.io/safety/",
       "https://seedaud.io/terms/"
     ],
-    "run_started_at": "2026-07-02T00:00:00Z",
+    "run_started_at": "2026-07-02T11:15:00Z",
     "run_finished_at": null
   },
-  "platforms": [],
-  "follow_up": []
+  "platforms": [
+    {
+      "platform": "github",
+      "status": "verified",
+      "artifact_type": "source_repository",
+      "automation_level": "automated",
+      "package": "bbwdadfg/seed-audio-ai-site-kit",
+      "version": "v0.1.0",
+      "public_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "gh_auth_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "github_api_and_release_page",
+        "result": "public repo, homepage, source, tag, and release verified",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "pkg_go_dev",
+      "status": "published",
+      "artifact_type": "go_module",
+      "automation_level": "automated_after_git_tag",
+      "package": "github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "version": "v0.1.0",
+      "public_url": "https://pkg.go.dev/github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "no_credentials_required",
+      "blocked_reason": "",
+      "verification": {
+        "method": "go_proxy_api",
+        "result": "Go proxy returned v0.1.0; pkg.go.dev page still returned 404 during indexing",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "recheck pkg.go.dev after indexing delay"
+      ]
+    },
+    {
+      "platform": "packagist",
+      "status": "verified",
+      "artifact_type": "composer_package",
+      "automation_level": "semi_auto_api",
+      "package": "bbwdadfg/seed-audio-ai-site-kit",
+      "version": "v0.1.0",
+      "public_url": "https://packagist.org/packages/bbwdadfg/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "packagist_provider_api",
+        "result": "repo.packagist.org returned v0.1.0 with homepage and GitHub source",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "crates_io_docs_rs",
+      "status": "verified",
+      "artifact_type": "rust_crate",
+      "automation_level": "automated_with_token",
+      "package": "seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://crates.io/crates/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "cargo_credentials_file_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "crates_api_and_docs_rs",
+        "result": "crates.io API and docs.rs page returned v0.1.0 with homepage/source links",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "rubygems",
+      "status": "verified",
+      "artifact_type": "ruby_gem",
+      "automation_level": "automated_with_token",
+      "package": "seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://rubygems.org/gems/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "gem_credentials_file_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "rubygems_api",
+        "result": "RubyGems API returned v0.1.0 with metadata links",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "gem CLI hit IPv6 TLS EOF; RubyGems API upload with IPv4 and octet-stream succeeded"
+      ]
+    },
+    {
+      "platform": "npm",
+      "status": "verified",
+      "artifact_type": "javascript_package",
+      "automation_level": "automated_with_token",
+      "package": "seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://www.npmjs.com/package/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "npm_registry_json",
+        "result": "npm registry returned v0.1.0 with homepage and repository links",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "pypi",
+      "status": "verified",
+      "artifact_type": "python_package",
+      "automation_level": "automated_with_token",
+      "package": "seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://pypi.org/project/seed-audio-ai-site-kit/",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "pypi_json_api",
+        "result": "PyPI JSON returned v0.1.0 with project URLs and homepage",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "pub_dev",
+      "status": "verified",
+      "artifact_type": "dart_package",
+      "automation_level": "semi_auto_oauth",
+      "package": "seed_audio_ai_site_kit",
+      "version": "0.1.0",
+      "public_url": "https://pub.dev/packages/seed_audio_ai_site_kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "dart_oauth_session_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "pub_dev_api",
+        "result": "pub.dev API returned v0.1.0 with homepage/repository metadata",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "hex_hexdocs",
+      "status": "verified",
+      "artifact_type": "elixir_package",
+      "automation_level": "automated_with_token",
+      "package": "seed_audio_ai_site_kit",
+      "version": "0.1.0",
+      "public_url": "https://hex.pm/packages/seed_audio_ai_site_kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "hex_api_and_hexdocs_page",
+        "result": "Hex package and HexDocs page returned v0.1.0 with seedaud.io link",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "clojars",
+      "status": "verified",
+      "artifact_type": "maven_artifact",
+      "automation_level": "automated_with_token",
+      "package": "net.clojars.tianwei/seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://clojars.org/net.clojars.tianwei/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "clojars_page_and_repo_pom",
+        "result": "Clojars page and repo POM returned homepage/source links",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "docker_hub",
+      "status": "verified",
+      "artifact_type": "oci_image",
+      "automation_level": "automated_with_token_or_api",
+      "package": "baiwei111/seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://hub.docker.com/r/baiwei111/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "docker_registry_api",
+        "result": "Docker Registry manifest verified for tag 0.1.0 with digest sha256:f4cdd0a5b30205c7f57a9b5d7bf6f84ea8f8e327bb6ce1d3a627e11573c7f3ab",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Docker Hub DNS/TLS required DoH plus curl --resolve fallback"
+      ]
+    },
+    {
+      "platform": "jsr",
+      "status": "blocked_oauth",
+      "artifact_type": "typescript_package",
+      "automation_level": "automated_with_token_then_oauth",
+      "package": "@bbwdadfg/seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://jsr.io/@bbwdadfg/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "new package web approval required",
+      "verification": {
+        "method": "jsr_dry_run",
+        "result": "JSR dry-run passed; live publish requires creating/approving the new scoped package page",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Approval URL: https://jsr.io/new?scope=bbwdadfg&package=seed-audio-ai-site-kit&from=cli",
+        "JSR CLI diagnostic exposed token in local command output; rotate the JSR token before reuse"
+      ]
+    },
+    {
+      "platform": "maven_central_javadoc",
+      "status": "planned",
+      "artifact_type": "maven_artifact",
+      "automation_level": "automated_with_token",
+      "package": "io.github.bbwdadfg:seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://central.sonatype.com/artifact/io.github.bbwdadfg/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_available",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "Maven Central release not attempted in this pass",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Requires Central Portal publishing plugin/signing flow and follow-up verification"
+      ]
+    },
+    {
+      "platform": "nuget",
+      "status": "verified",
+      "artifact_type": "dotnet_package",
+      "automation_level": "automated_with_token",
+      "package": "SeedAudioAISiteKit",
+      "version": "0.1.0",
+      "public_url": "https://www.nuget.org/packages/SeedAudioAISiteKit/0.1.0",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "nuget_registration_api",
+        "result": "NuGet registration API returned v0.1.0 with project URL and description",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "cocoapods",
+      "status": "verified",
+      "artifact_type": "swift_pod",
+      "automation_level": "github_actions_with_token",
+      "package": "SeedAudioAISiteKit",
+      "version": "0.1.0",
+      "public_url": "https://cocoapods.org/pods/SeedAudioAISiteKit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used_via_github_actions_secret",
+      "blocked_reason": "",
+      "verification": {
+        "method": "cocoapods_public_page",
+        "result": "CocoaPods public page returned v0.1.0 with homepage, GitHub repo, and README links",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Local trunk push failed because CommandLineTools lacked simctl; GitHub Actions macos-latest publish succeeded"
+      ]
+    },
+    {
+      "platform": "luarocks",
+      "status": "verified",
+      "artifact_type": "lua_rock",
+      "automation_level": "automated_with_token",
+      "package": "seed-audio-ai-site-kit",
+      "version": "0.1.0-1",
+      "public_url": "https://luarocks.org/modules/bbwdadfg/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "luarocks_public_page",
+        "result": "LuaRocks public page returned 0.1.0-1 with homepage link",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "cpan_metacpan",
+      "status": "blocked_credentials",
+      "artifact_type": "perl_distribution",
+      "automation_level": "automated_with_token",
+      "package": "Seed-Audio-AI-SiteKit",
+      "version": "0.1.0",
+      "public_url": "https://metacpan.org/release/Seed-Audio-AI-SiteKit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_credentials_rejected",
+      "blocked_reason": "PAUSE credentials returned 401",
+      "verification": {
+        "method": "cpan_upload_response",
+        "result": "cpan-upload built the tarball but PAUSE returned 401 Unauthorized",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "chocolatey",
+      "status": "planned",
+      "artifact_type": "chocolatey_package",
+      "automation_level": "automated_with_token_then_review",
+      "package": "seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://community.chocolatey.org/packages/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_available",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "Chocolatey package not prepared in this pass",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Should only proceed with a real CLI/helper package and community review"
+      ]
+    },
+    {
+      "platform": "github_packages",
+      "status": "published",
+      "artifact_type": "npm_package",
+      "automation_level": "automated_with_token",
+      "package": "@bbwdadfg/seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://github.com/users/bbwdadfg/packages/npm/package/seed-audio-ai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "package visibility is private",
+      "verification": {
+        "method": "github_packages_api",
+        "result": "Package uploaded; GitHub API reports visibility private and unauthenticated page returned 404",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Needs package visibility changed to public in GitHub package settings or with a token that can change visibility"
+      ]
+    },
+    {
+      "platform": "gitlab_package_registry",
+      "status": "planned",
+      "artifact_type": "npm_package",
+      "automation_level": "automated_with_token",
+      "package": "seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_available",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_run",
+        "result": "GitLab package registry not attempted because no GitLab project/namespace was prepared in this pass",
+        "checked_at": "2026-07-02T11:45:00Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Requires GitLab project/repo target before publish"
+      ]
+    }
+  ],
+  "follow_up": [
+    {
+      "platform": "jsr",
+      "reason": "create/approve scoped package page, then rerun publish",
+      "owner": "user"
+    },
+    {
+      "platform": "github_packages",
+      "reason": "change package visibility from private to public",
+      "owner": "user"
+    },
+    {
+      "platform": "pkg_go_dev",
+      "reason": "recheck indexing after Go proxy fetch",
+      "owner": "agent"
+    },
+    {
+      "platform": "cpan_metacpan",
+      "reason": "PAUSE credentials returned 401",
+      "owner": "user"
+    },
+    {
+      "platform": "maven_central_javadoc",
+      "reason": "complete signed Central Portal publish flow",
+      "owner": "agent/user"
+    },
+    {
+      "platform": "chocolatey",
+      "reason": "prepare real CLI/helper package and submit for review",
+      "owner": "agent"
+    },
+    {
+      "platform": "gitlab_package_registry",
+      "reason": "prepare GitLab project/namespace target",
+      "owner": "agent/user"
+    }
+  ]
 }
