@@ -729,11 +729,11 @@
         "pypi_sdist"
       ],
       "credential_status": "no_credentials_required_for_local_recipe; github_pr_review_required_for_publish",
-      "blocked_reason": "Conda-forge staged-recipes PR is open. Recipe fixes were pushed in commits 67c24b9902 and a5b5c421f8 to patch PyPI sdist license metadata and provide the declared license_file; conda-forge CI rerun is pending. Mark verified only after feedstock or Anaconda package page exists.",
+      "blocked_reason": "Conda-forge staged-recipes PR is open with all CI checks passing after recipe fixes in commits 67c24b9902 and a5b5c421f8. Await conda-forge maintainer review/merge and feedstock or Anaconda package page before marking verified.",
       "verification": {
         "method": "github_pr_checks_and_local_patched_sdist_install",
-        "result": "Azure logs showed the first fix resolved pip metadata generation, then conda-build failed because about/license_file pointed to missing LICENSE. Pushed staged-recipes commit a5b5c421f8 adding the recipe LICENSE file after commit 67c24b9902 added pyproject-license.patch; local patched sdist install with --no-build-isolation and import/URL tests passed. PR #34033 CI rerun is pending.",
-        "checked_at": "2026-07-02T18:04:02Z"
+        "result": "Conda-forge PR #34033 CI passed after staged-recipes commits 67c24b9902 and a5b5c421f8: conda-forge-linter pass, linter pass, Azure staged-recipes pass, linux_64 pass, win_64 pass, osx_64 pass, build status pass, fast finish pass, and check skip pass. Await maintainer merge/feedstock before marking verified.",
+        "checked_at": "2026-07-02T18:18:03Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
@@ -809,7 +809,7 @@
     },
     {
       "platform": "conda_forge",
-      "reason": "Conda-forge staged-recipes PR is open. Recipe fixes were pushed in commits 67c24b9902 and a5b5c421f8 to patch PyPI sdist license metadata and provide the declared license_file; conda-forge CI rerun is pending. Mark verified only after feedstock or Anaconda package page exists.",
+      "reason": "Conda-forge staged-recipes PR is open with all CI checks passing after recipe fixes in commits 67c24b9902 and a5b5c421f8. Await conda-forge maintainer review/merge and feedstock or Anaconda package page before marking verified.",
       "owner": "agent/user"
     },
     {

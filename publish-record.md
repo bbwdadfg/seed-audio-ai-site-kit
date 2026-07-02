@@ -42,7 +42,7 @@
 | terraform_registry | `bbwdadfg/seed-audio-ai-pwa-toolkit/null` | `v0.1.0` | <https://registry.terraform.io/modules/bbwdadfg/seed-audio-ai-pwa-toolkit/null/latest> | Imported through HCP Terraform public namespace bbwdadfg from GitHub repo bbwdadfg/terraform-null-seed-audio-ai-pwa-toolkit; Registry API returned HTTP 200 for bbwdadfg/seed-audio-ai-pwa-toolkit/null with version 0.1.0, tag v0.1.0, source repository, README, inputs, outputs, and examples; public module page returned HTTP 200. |
 | ansible_galaxy | `bbwdadfg.seed_audio_ai_pwa_toolkit` | `0.1.0` | <https://galaxy.ansible.com/ui/repo/published/bbwdadfg/seed_audio_ai_pwa_toolkit/> | ansible-galaxy collection build passed; local module call returned Seed Audio AI links; Galaxy publish/import succeeded; public page returned HTTP 200 and API highest_version is 0.1.0. |
 | open_vsx | `bbwdadfg.seed-audio-ai-pwa-toolkit` | `0.1.0` | <https://open-vsx.org/extension/bbwdadfg/seed-audio-ai-pwa-toolkit> | Open VSX API returned HTTP 200 for bbwdadfg.seed-audio-ai-pwa-toolkit version 0.1.0 with homepage https://seedaud.io/, repository https://github.com/bbwdadfg/seed-audio-ai-site-kit.git, downloadable=true, and VSIX download URL. |
-| conda_forge | `seed-audio-ai-site-kit` | `0.1.0` | <https://github.com/conda-forge/staged-recipes/pull/34033> | Azure logs showed the first fix resolved pip metadata generation, then conda-build failed because about/license_file pointed to missing LICENSE. Pushed staged-recipes commit a5b5c421f8 adding the recipe LICENSE file after commit 67c24b9902 added pyproject-license.patch; local patched sdist install with --no-build-isolation and import/URL tests passed. PR #34033 CI rerun is pending. |
+| conda_forge | `seed-audio-ai-site-kit` | `0.1.0` | <https://github.com/conda-forge/staged-recipes/pull/34033> | Conda-forge PR #34033 CI passed after staged-recipes commits 67c24b9902 and a5b5c421f8: conda-forge-linter pass, linter pass, Azure staged-recipes pass, linux_64 pass, win_64 pass, osx_64 pass, build status pass, fast finish pass, and check skip pass. Await maintainer merge/feedstock before marking verified. |
 
 ## Prepared But Not Public
 
@@ -55,7 +55,7 @@
 | Platform | Status | Reason |
 | --- | --- | --- |
 | chocolatey | `submitted` | Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status |
-| conda_forge | `submitted` | Conda-forge staged-recipes PR is open. Recipe fixes were pushed in commits 67c24b9902 and a5b5c421f8 to patch PyPI sdist license metadata and provide the declared license_file; conda-forge CI rerun is pending. Mark verified only after feedstock or Anaconda package page exists. |
+| conda_forge | `submitted` | Conda-forge staged-recipes PR is open with all CI checks passing after recipe fixes in commits 67c24b9902 and a5b5c421f8. Await conda-forge maintainer review/merge and feedstock or Anaconda package page before marking verified. |
 | cran | `submitted` | CRAN maintainer confirmation is complete and the package has been submitted to the CRAN team; public CRAN package page still returns 404 until CRAN review/indexing completes. |
 | flathub | `blocked_review` | Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed. |
 
@@ -68,6 +68,6 @@
 ## Follow-Up Queue
 
 - chocolatey: Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status
-- conda_forge: Conda-forge staged-recipes PR is open. Recipe fixes were pushed in commits 67c24b9902 and a5b5c421f8 to patch PyPI sdist license metadata and provide the declared license_file; conda-forge CI rerun is pending. Mark verified only after feedstock or Anaconda package page exists.
+- conda_forge: Conda-forge staged-recipes PR is open with all CI checks passing after recipe fixes in commits 67c24b9902 and a5b5c421f8. Await conda-forge maintainer review/merge and feedstock or Anaconda package page before marking verified.
 - cran: CRAN maintainer confirmation is complete and the package has been submitted to the CRAN team; public CRAN package page still returns 404 until CRAN review/indexing completes.
 - flathub: Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed.
