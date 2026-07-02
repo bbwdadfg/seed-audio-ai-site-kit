@@ -742,17 +742,17 @@
         "R_package_docs"
       ],
       "credential_status": "no_credentials_required_for_local_check; maintainer_email_confirmation_required_for_submission",
-      "blocked_reason": "CRAN upload and maintainer email confirmation were not completed; Chrome extension backend was unavailable for logged-in/manual browser submission.",
+      "blocked_reason": "CRAN upload and Step 2 submission completed, but CRAN says the submission is not complete until the maintainer confirms the email sent to packages@seedaud.io.",
       "verification": {
-        "method": "R_CMD_check_as_cran",
-        "result": "R CMD build succeeded; R CMD check --as-cran completed with 1 NOTE only: New submission.",
-        "checked_at": "2026-07-02T15:22:48Z"
+        "method": "cran_upload_step3_waiting_maintainer_confirmation",
+        "result": "Uploaded seedAudioAiPwaToolkit_0.1.0.tar.gz to CRAN submit, reviewed detected package metadata, and submitted Step 2; CRAN displayed Step 3 message that maintainer confirmation email was sent.",
+        "checked_at": "2026-07-02T15:42:27Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
-        "CRAN status should become submitted only after upload and maintainer email confirmation."
+        "After maintainer email confirmation, update status to submitted and wait for CRAN review."
       ]
     },
     {

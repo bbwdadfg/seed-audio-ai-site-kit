@@ -50,7 +50,7 @@
 
 | Platform | Status | Verification | Reason |
 | --- | --- | --- | --- |
-| cran | `dry_run_passed` | R CMD build succeeded; R CMD check --as-cran completed with 1 NOTE only: New submission. | CRAN upload and maintainer email confirmation were not completed; Chrome extension backend was unavailable for logged-in/manual browser submission. |
+| cran | `dry_run_passed` | Uploaded seedAudioAiPwaToolkit_0.1.0.tar.gz to CRAN submit, reviewed detected package metadata, and submitted Step 2; CRAN displayed Step 3 message that maintainer confirmation email was sent. | CRAN upload and Step 2 submission completed, but CRAN says the submission is not complete until the maintainer confirms the email sent to packages@seedaud.io. |
 
 ## Blocked Or Manual Follow-Up
 
@@ -60,7 +60,7 @@
 | terraform_registry | `blocked_oauth` | Terraform Registry public module import requires web UI login plus GitHub OAuth/import; Registry API returned 404 before import and Chrome extension backend was unavailable. |
 | open_vsx | `blocked_credentials` | Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable. |
 | conda_forge | `submitted` | Conda-forge staged-recipes PR is open and awaiting CI/maintainer review; mark verified only after feedstock or Anaconda package page exists. |
-| cran | `dry_run_passed` | CRAN upload and maintainer email confirmation were not completed; Chrome extension backend was unavailable for logged-in/manual browser submission. |
+| cran | `dry_run_passed` | CRAN upload and Step 2 submission completed, but CRAN says the submission is not complete until the maintainer confirms the email sent to packages@seedaud.io. |
 | flathub | `blocked_review` | Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed. |
 
 ## Credential Cleanup
@@ -76,5 +76,5 @@
 - terraform_registry: Terraform Registry public module import requires web UI login plus GitHub OAuth/import; Registry API returned 404 before import and Chrome extension backend was unavailable.
 - open_vsx: Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable.
 - conda_forge: Conda-forge staged-recipes PR is open and awaiting CI/maintainer review; mark verified only after feedstock or Anaconda package page exists.
-- cran: CRAN upload and maintainer email confirmation were not completed; Chrome extension backend was unavailable for logged-in/manual browser submission.
+- cran: CRAN upload and Step 2 submission completed, but CRAN says the submission is not complete until the maintainer confirms the email sent to packages@seedaud.io.
 - flathub: Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed.
