@@ -1,0 +1,20 @@
+{
+  "name": "bbwdadfg/seed-audio-ai-site-kit",
+  "description": "Small unofficial metadata and URL helpers for Seed Audio AI at seedaud.io.",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://seedaud.io/",
+  "keywords": ["seedaud", "seed-audio-ai", "text-to-speech", "ai-voice", "site-kit"],
+  "support": {
+    "source": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+    "issues": "https://github.com/bbwdadfg/seed-audio-ai-site-kit/issues"
+  },
+  "autoload": {
+    "psr-4": {
+      "SeedAudioAI\\SiteKit\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.1"
+  }
+}

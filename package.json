@@ -1,0 +1,30 @@
+{
+  "name": "seed-audio-ai-site-kit",
+  "version": "0.1.0",
+  "description": "Small unofficial metadata and URL helpers for Seed Audio AI at seedaud.io.",
+  "homepage": "https://seedaud.io/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbwdadfg/seed-audio-ai-site-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit/issues"
+  },
+  "license": "MIT",
+  "main": "src/sitekit.js",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "seed-audio-ai",
+    "seedaud",
+    "text-to-speech",
+    "ai-voice",
+    "site-kit"
+  ],
+  "scripts": {
+    "test": "node tests/sitekit.test.js"
+  }
+}

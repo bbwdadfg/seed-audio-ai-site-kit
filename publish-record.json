@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "target": {
+    "site": "https://seedaud.io",
+    "brand": "Seed Audio AI",
+    "site_type": "text_to_speech_ai_voice_generator",
+    "slug_hyphen": "seed-audio-ai-site-kit",
+    "slug_underscore": "seed_audio_ai_site_kit",
+    "source_repo": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+    "useful_urls": [
+      "https://seedaud.io/",
+      "https://seedaud.io/text-to-speech/",
+      "https://seedaud.io/pricing/",
+      "https://seedaud.io/safety/",
+      "https://seedaud.io/terms/"
+    ],
+    "run_started_at": "2026-07-02T00:00:00Z",
+    "run_finished_at": null
+  },
+  "platforms": [],
+  "follow_up": []
+}

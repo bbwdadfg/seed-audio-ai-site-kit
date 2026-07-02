@@ -1,0 +1,16 @@
+[package]
+name = "seed-audio-ai-site-kit"
+version = "0.1.0"
+edition = "2021"
+description = "Small unofficial metadata and URL helpers for Seed Audio AI at seedaud.io."
+license = "MIT"
+homepage = "https://seedaud.io/"
+repository = "https://github.com/bbwdadfg/seed-audio-ai-site-kit"
+documentation = "https://docs.rs/seed-audio-ai-site-kit"
+readme = "README.md"
+keywords = ["seedaud", "tts", "voice", "site-kit"]
+categories = ["web-programming"]
+
+[lib]
+name = "seed_audio_ai_site_kit"
+path = "src/lib.rs"

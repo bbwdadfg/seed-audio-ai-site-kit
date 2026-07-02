@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.bbwdadfg</groupId>
+  <artifactId>seed-audio-ai-site-kit</artifactId>
+  <version>0.1.0</version>
+  <name>Seed Audio AI Site Kit</name>
+  <description>Small unofficial metadata and URL helpers for Seed Audio AI at seedaud.io.</description>
+  <url>https://seedaud.io/</url>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/license/mit/</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>bbwdadfg</id>
+      <name>Seed Audio AI Site Kit contributors</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:https://github.com/bbwdadfg/seed-audio-ai-site-kit.git</connection>
+    <developerConnection>scm:git:https://github.com/bbwdadfg/seed-audio-ai-site-kit.git</developerConnection>
+    <url>https://github.com/bbwdadfg/seed-audio-ai-site-kit</url>
+    <tag>v0.1.0</tag>
+  </scm>
+  <properties>
+    <maven.compiler.release>11</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.3.1</version>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.10.3</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
