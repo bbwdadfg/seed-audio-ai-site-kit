@@ -682,30 +682,31 @@
     },
     {
       "platform": "open_vsx",
-      "status": "blocked_credentials",
+      "status": "submitted",
       "artifact_type": "vscode_compatible_extension",
       "automation_level": "semi_auto_review",
       "package": "bbwdadfg.seed-audio-ai-pwa-toolkit",
       "version": "0.1.0",
-      "public_url": "",
+      "public_url": "https://open-vsx.org/extension/bbwdadfg/seed-audio-ai-pwa-toolkit",
       "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
       "link_surfaces_verified": [
         "package_json_homepage",
         "repository",
         "README.md"
       ],
-      "credential_status": "openvsx_token_missing",
-      "blocked_reason": "Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable.",
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "Open VSX CLI accepted the publish, but the public API still returns 404 and search does not list the extension yet. Wait for indexing/review, then mark verified only after the API/page exposes the extension metadata.",
       "verification": {
-        "method": "vsix_package_dry_run",
-        "result": "npm test passed and vsce packaged seed-audio-ai-pwa-toolkit-0.1.0.vsix with only LICENSE, extension.js, package.json, and README included.",
-        "checked_at": "2026-07-02T15:22:48Z"
+        "method": "ovsx_publish_and_public_api_probe",
+        "result": "npm test passed; vsce packaged seed-audio-ai-pwa-toolkit-0.1.0.vsix; ovsx publish returned Published bbwdadfg.seed-audio-ai-pwa-toolkit v0.1.0 using the Keychain token; Open VSX API still returned HTTP 404 immediately after publishing, so this is submitted pending indexing/review.",
+        "checked_at": "2026-07-02T17:46:15Z"
       },
       "cleanup": [
-        "temporary token/config files removed or avoided; no secrets recorded"
+        "Open VSX token remains in macOS Keychain for reuse; no secret recorded in files"
       ],
       "notes": [
-        "VSIX artifact is buildable locally but ignored by git as generated output."
+        "VSIX artifact is buildable locally but ignored by git as generated output.",
+        "Reusable Open VSX token is stored in Keychain service publish-package-backlinks/openvsx-token."
       ]
     },
     {
@@ -802,8 +803,8 @@
     },
     {
       "platform": "open_vsx",
-      "reason": "Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable.",
-      "owner": "user"
+      "reason": "Open VSX CLI accepted the publish, but the public API still returns 404 and search does not list the extension yet. Wait for indexing/review, then mark verified only after the API/page exposes the extension metadata.",
+      "owner": "agent/user"
     },
     {
       "platform": "conda_forge",

@@ -3,15 +3,14 @@
 - Site: <https://seedaud.io>
 - Source repo: <https://github.com/bbwdadfg/seed-audio-ai-site-kit>
 - Started: 2026-07-02T11:15:00Z
-- Finished: pending Chocolatey review, Conda-forge CI fix/review, CRAN review/indexing, Open VSX credentials, and Flathub review/tooling
+- Finished: pending Chocolatey review, Conda-forge CI fix/review, CRAN review/indexing, Open VSX indexing/review, and Flathub review/tooling
 
 ## Summary
 
 | Status | Count |
 | --- | ---: |
-| blocked_credentials | 1 |
 | blocked_review | 1 |
-| submitted | 3 |
+| submitted | 4 |
 | verified | 23 |
 
 ## Published Links
@@ -42,6 +41,7 @@
 | helm_artifact_hub | `seed-audio-ai-pwa-toolkit` | `0.1.0` | <https://artifacthub.io/packages/helm/seed-audio-ai-pwa-helm-charts/seed-audio-ai-pwa-toolkit> | Artifact Hub package API returned seed-audio-ai-pwa-toolkit version 0.1.0 from repository seed-audio-ai-pwa-helm-charts with verified_publisher=true and links to https://seedaud.io/, https://seedaud.io/text-to-speech/, and the GitHub source repository. |
 | terraform_registry | `bbwdadfg/seed-audio-ai-pwa-toolkit/null` | `v0.1.0` | <https://registry.terraform.io/modules/bbwdadfg/seed-audio-ai-pwa-toolkit/null/latest> | Imported through HCP Terraform public namespace bbwdadfg from GitHub repo bbwdadfg/terraform-null-seed-audio-ai-pwa-toolkit; Registry API returned HTTP 200 for bbwdadfg/seed-audio-ai-pwa-toolkit/null with version 0.1.0, tag v0.1.0, source repository, README, inputs, outputs, and examples; public module page returned HTTP 200. |
 | ansible_galaxy | `bbwdadfg.seed_audio_ai_pwa_toolkit` | `0.1.0` | <https://galaxy.ansible.com/ui/repo/published/bbwdadfg/seed_audio_ai_pwa_toolkit/> | ansible-galaxy collection build passed; local module call returned Seed Audio AI links; Galaxy publish/import succeeded; public page returned HTTP 200 and API highest_version is 0.1.0. |
+| open_vsx | `bbwdadfg.seed-audio-ai-pwa-toolkit` | `0.1.0` | <https://open-vsx.org/extension/bbwdadfg/seed-audio-ai-pwa-toolkit> | npm test passed; vsce packaged seed-audio-ai-pwa-toolkit-0.1.0.vsix; ovsx publish returned Published bbwdadfg.seed-audio-ai-pwa-toolkit v0.1.0 using the Keychain token; Open VSX API still returned HTTP 404 immediately after publishing, so this is submitted pending indexing/review. |
 | conda_forge | `seed-audio-ai-site-kit` | `0.1.0` | <https://github.com/conda-forge/staged-recipes/pull/34033> | PR #34033 is open and mergeable; conda-forge linter passed, but staged-recipes Azure build checks failed on linux_64, osx_64, win_64, and build status. |
 
 ## Prepared But Not Public
@@ -55,7 +55,7 @@
 | Platform | Status | Reason |
 | --- | --- | --- |
 | chocolatey | `submitted` | Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status |
-| open_vsx | `blocked_credentials` | Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable. |
+| open_vsx | `submitted` | Open VSX CLI accepted the publish, but the public API still returns 404 and search does not list the extension yet. Wait for indexing/review, then mark verified only after the API/page exposes the extension metadata. |
 | conda_forge | `submitted` | Conda-forge staged-recipes PR is open, linter passed, but Azure staged-recipes builds failed on linux_64, osx_64, and win_64. This needs recipe/build fix before maintainer review can proceed; mark verified only after feedstock or Anaconda package page exists. |
 | cran | `submitted` | CRAN maintainer confirmation is complete and the package has been submitted to the CRAN team; public CRAN package page still returns 404 until CRAN review/indexing completes. |
 | flathub | `blocked_review` | Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed. |
@@ -69,7 +69,7 @@
 ## Follow-Up Queue
 
 - chocolatey: Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status
-- open_vsx: Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable.
+- open_vsx: Open VSX CLI accepted the publish, but the public API still returns 404 and search does not list the extension yet. Wait for indexing/review, then mark verified only after the API/page exposes the extension metadata.
 - conda_forge: Conda-forge staged-recipes PR is open, linter passed, but Azure staged-recipes builds failed on linux_64, osx_64, and win_64. This needs recipe/build fix before maintainer review can proceed; mark verified only after feedstock or Anaconda package page exists.
 - cran: CRAN maintainer confirmation is complete and the package has been submitted to the CRAN team; public CRAN package page still returns 404 until CRAN review/indexing completes.
 - flathub: Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed.
