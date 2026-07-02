@@ -11,10 +11,10 @@
 | --- | ---: |
 | blocked_credentials | 1 |
 | blocked_oauth | 1 |
-| blocked_review | 2 |
+| blocked_review | 1 |
 | dry_run_passed | 1 |
 | published | 1 |
-| submitted | 1 |
+| submitted | 2 |
 | verified | 21 |
 
 ## Published Links
@@ -44,6 +44,7 @@
 | homebrew | `bbwdadfg/tap/seed-audio-ai-pwa-toolkit` | `0.1.0` | <https://github.com/bbwdadfg/homebrew-tap/blob/main/Formula/seed-audio-ai-pwa-toolkit.rb> | brew tap, brew install, brew test, and CLI smoke test returned https://seedaud.io/ for bbwdadfg/tap/seed-audio-ai-pwa-toolkit 0.1.0 |
 | helm_artifact_hub | `seed-audio-ai-pwa-toolkit` | `0.1.0` | <https://github.com/bbwdadfg/seed-audio-ai-pwa-helm-charts> | helm lint/template passed locally; public repo add/update/search/pull/template succeeded from raw GitHub index.yaml version 0.1.0 |
 | ansible_galaxy | `bbwdadfg.seed_audio_ai_pwa_toolkit` | `0.1.0` | <https://galaxy.ansible.com/ui/repo/published/bbwdadfg/seed_audio_ai_pwa_toolkit/> | ansible-galaxy collection build passed; local module call returned Seed Audio AI links; Galaxy publish/import succeeded; public page returned HTTP 200 and API highest_version is 0.1.0. |
+| conda_forge | `seed-audio-ai-site-kit` | `0.1.0` | <https://github.com/conda-forge/staged-recipes/pull/34033> | Created conda-forge/staged-recipes PR #34033 for seed-audio-ai-site-kit 0.1.0 from PyPI using sha256 e68b32868bf391aa065c0903fd271717cfbc0581e6d7777afef042d7e5d780c1. |
 
 ## Prepared But Not Public
 
@@ -58,7 +59,7 @@
 | helm_artifact_hub | `published` | Artifact Hub repository add/ownership verification requires logged-in browser/OAuth; Chrome extension backend was unavailable in this session. |
 | terraform_registry | `blocked_oauth` | Terraform Registry public module import requires web UI login plus GitHub OAuth/import; Registry API returned 404 before import and Chrome extension backend was unavailable. |
 | open_vsx | `blocked_credentials` | Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable. |
-| conda_forge | `blocked_review` | Conda-forge requires staged-recipes PR and maintainer review. Local rattler build was blocked by conda-forge download TLS EOF, and render-only hit a rattler panic; no PR was opened without a clean local build. |
+| conda_forge | `submitted` | Conda-forge staged-recipes PR is open and awaiting CI/maintainer review; mark verified only after feedstock or Anaconda package page exists. |
 | cran | `dry_run_passed` | CRAN upload and maintainer email confirmation were not completed; Chrome extension backend was unavailable for logged-in/manual browser submission. |
 | flathub | `blocked_review` | Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed. |
 
@@ -74,6 +75,6 @@
 - helm_artifact_hub: Artifact Hub repository add/ownership verification requires logged-in browser/OAuth; Chrome extension backend was unavailable in this session.
 - terraform_registry: Terraform Registry public module import requires web UI login plus GitHub OAuth/import; Registry API returned 404 before import and Chrome extension backend was unavailable.
 - open_vsx: Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable.
-- conda_forge: Conda-forge requires staged-recipes PR and maintainer review. Local rattler build was blocked by conda-forge download TLS EOF, and render-only hit a rattler panic; no PR was opened without a clean local build.
+- conda_forge: Conda-forge staged-recipes PR is open and awaiting CI/maintainer review; mark verified only after feedstock or Anaconda package page exists.
 - cran: CRAN upload and maintainer email confirmation were not completed; Chrome extension backend was unavailable for logged-in/manual browser submission.
 - flathub: Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed.

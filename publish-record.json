@@ -701,12 +701,12 @@
     },
     {
       "platform": "conda_forge",
-      "status": "blocked_review",
+      "status": "submitted",
       "artifact_type": "conda_recipe",
       "automation_level": "pr_review",
       "package": "seed-audio-ai-site-kit",
       "version": "0.1.0",
-      "public_url": "",
+      "public_url": "https://github.com/conda-forge/staged-recipes/pull/34033",
       "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
       "link_surfaces_verified": [
         "recipe_home",
@@ -714,17 +714,17 @@
         "pypi_sdist"
       ],
       "credential_status": "no_credentials_required_for_local_recipe; github_pr_review_required_for_publish",
-      "blocked_reason": "Conda-forge requires staged-recipes PR and maintainer review. Local rattler build was blocked by conda-forge download TLS EOF, and render-only hit a rattler panic; no PR was opened without a clean local build.",
+      "blocked_reason": "Conda-forge staged-recipes PR is open and awaiting CI/maintainer review; mark verified only after feedstock or Anaconda package page exists.",
       "verification": {
-        "method": "pypi_sdist_and_recipe_preflight",
-        "result": "PyPI sdist version 0.1.0 returned HTTP 200 and sha256 e68b32868bf391aa065c0903fd271717cfbc0581e6d7777afef042d7e5d780c1; conda-build meta.yaml and rattler recipe.yaml were prepared.",
-        "checked_at": "2026-07-02T15:22:48Z"
+        "method": "staged_recipes_pull_request",
+        "result": "Created conda-forge/staged-recipes PR #34033 for seed-audio-ai-site-kit 0.1.0 from PyPI using sha256 e68b32868bf391aa065c0903fd271717cfbc0581e6d7777afef042d7e5d780c1.",
+        "checked_at": "2026-07-02T15:38:45Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
-        "Retry rattler build or submit staged-recipes PR after local conda package solving is stable."
+        "Local rattler build had network/tooling issues, so final validation is delegated to staged-recipes CI and maintainer review."
       ]
     },
     {
