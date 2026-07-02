@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>seed-audio-ai-site-kit</id>
+    <version>0.1.0</version>
+    <title>Seed Audio AI Site Kit</title>
+    <authors>Seed Audio AI Site Kit contributors</authors>
+    <owners>bbwdadfg</owners>
+    <summary>Small unofficial metadata and URL helpers for Seed Audio AI.</summary>
+    <description>Seed Audio AI Site Kit provides small PowerShell metadata and URL helpers for Seed Audio AI at seedaud.io. It is an unofficial package intended for scripts, audits, and package ecosystem discovery.</description>
+    <projectUrl>https://seedaud.io/</projectUrl>
+    <licenseUrl>https://opensource.org/license/mit/</licenseUrl>
+    <tags>seed-audio-ai seedaud text-to-speech ai-voice site-kit powershell</tags>
+    <releaseNotes>Initial Chocolatey package with PowerShell metadata and URL helpers.</releaseNotes>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+  <files>
+    <file src="README.md" target="README.md" />
+    <file src="LICENSE.txt" />
+    <file src="tools\SeedAudioAISiteKit.psm1" target="tools\SeedAudioAISiteKit.psm1" />
+    <file src="tools\VERIFICATION.txt" target="tools\VERIFICATION.txt" />
+  </files>
+</package>

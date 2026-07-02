@@ -1,0 +1,9 @@
+This package contains source-only helper files from:
+
+https://github.com/bbwdadfg/seed-audio-ai-site-kit
+
+The PowerShell module provides metadata and URL helpers for Seed Audio AI at:
+
+https://seedaud.io/
+
+No binary artifacts are included.
