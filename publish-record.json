@@ -603,17 +603,17 @@
         "chart_repository"
       ],
       "credential_status": "gh_auth_used",
-      "blocked_reason": "Artifact Hub repository add/ownership verification requires logged-in browser/OAuth; Chrome extension backend was unavailable in this session.",
+      "blocked_reason": "Artifact Hub repository ownership file is now published with repositoryID 9ec18efa-76cb-4dea-85f7-a2bf87f0369c; Artifact Hub API still returns 404 until repository processing/indexing completes.",
       "verification": {
-        "method": "helm_repo_public_installability",
-        "result": "helm lint/template passed locally; public repo add/update/search/pull/template succeeded from raw GitHub index.yaml version 0.1.0",
-        "checked_at": "2026-07-02T15:22:48Z"
+        "method": "artifacthub_repo_ownership_file_and_helm_index",
+        "result": "Published artifacthub-repo.yml to the Helm repo root with repositoryID 9ec18efa-76cb-4dea-85f7-a2bf87f0369c and owner support@seedaud.io; raw GitHub ownership file and Helm index.yaml both returned HTTP 200 and parsed successfully.",
+        "checked_at": "2026-07-02T16:04:45Z"
       },
       "cleanup": [
         "temporary token/config files removed or avoided; no secrets recorded"
       ],
       "notes": [
-        "Chart repository is installable now; Artifact Hub page is pending manual logged-in repository submission or indexing."
+        "Artifact Hub UI showed the repository as not processed yet; recheck after the scheduled processing window."
       ]
     },
     {
