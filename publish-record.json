@@ -618,30 +618,33 @@
     },
     {
       "platform": "terraform_registry",
-      "status": "blocked_oauth",
+      "status": "verified",
       "artifact_type": "terraform_module",
       "automation_level": "semi_auto",
       "package": "bbwdadfg/seed-audio-ai-pwa-toolkit/null",
       "version": "v0.1.0",
-      "public_url": "",
+      "public_url": "https://registry.terraform.io/modules/bbwdadfg/seed-audio-ai-pwa-toolkit/null/latest",
       "repository_url": "https://github.com/bbwdadfg/terraform-null-seed-audio-ai-pwa-toolkit",
       "link_surfaces_verified": [
         "README.md",
         "examples",
-        "source_repository"
+        "source_repository",
+        "registry_module_page",
+        "registry_api"
       ],
-      "credential_status": "gh_auth_used; hashicorp_token_not_sufficient_for_public_registry_import",
-      "blocked_reason": "Terraform Registry public module import requires web UI login plus GitHub OAuth/import; Registry API returned 404 before import and Chrome extension backend was unavailable.",
+      "credential_status": "logged_in_chrome_hcp_github_oauth_used; no_token_recorded",
+      "blocked_reason": "",
       "verification": {
-        "method": "terraform_validate_and_registry_api_probe",
-        "result": "Public GitHub module repo and tag v0.1.0 are ready; terraform fmt -check, root validate, and example validate passed; registry module API still returned 404.",
-        "checked_at": "2026-07-02T15:22:48Z"
+        "method": "terraform_registry_api_and_public_page",
+        "result": "Imported through HCP Terraform public namespace bbwdadfg from GitHub repo bbwdadfg/terraform-null-seed-audio-ai-pwa-toolkit; Registry API returned HTTP 200 for bbwdadfg/seed-audio-ai-pwa-toolkit/null with version 0.1.0, tag v0.1.0, source repository, README, inputs, outputs, and examples; public module page returned HTTP 200.",
+        "checked_at": "2026-07-02T16:27:12Z"
       },
       "cleanup": [
-        "temporary token/config files removed or avoided; no secrets recorded"
+        "no token or secret was recorded; publish used the existing logged-in Chrome session"
       ],
       "notes": [
-        "Ready repo name follows terraform-null-seed-audio-ai-pwa-toolkit convention for provider null."
+        "Ready repo name follows terraform-null-seed-audio-ai-pwa-toolkit convention for provider null.",
+        "Published as bbwdadfg/seed-audio-ai-pwa-toolkit/null from the terraform-null-seed-audio-ai-pwa-toolkit repository."
       ]
     },
     {
@@ -786,38 +789,33 @@
   ],
   "follow_up": [
     {
-      "platform": "jsr",
-      "reason": "create/approve scoped package page, then rerun publish",
-      "owner": "user"
-    },
-    {
-      "platform": "github_packages",
-      "reason": "change package visibility from private to public",
-      "owner": "user"
-    },
-    {
-      "platform": "pkg_go_dev",
-      "reason": "recheck indexing after Go proxy fetch",
-      "owner": "agent"
-    },
-    {
-      "platform": "cpan_metacpan",
-      "reason": "PAUSE credentials returned 401",
-      "owner": "user"
-    },
-    {
-      "platform": "maven_central_javadoc",
-      "reason": "complete signed Central Portal publish flow",
+      "platform": "chocolatey",
+      "reason": "Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status",
       "owner": "agent/user"
     },
     {
-      "platform": "chocolatey",
-      "reason": "prepare real CLI/helper package and submit for review",
-      "owner": "agent"
+      "platform": "helm_artifact_hub",
+      "reason": "Artifact Hub repository ownership file is now published with repositoryID 9ec18efa-76cb-4dea-85f7-a2bf87f0369c; Artifact Hub API still returns 404 until repository processing/indexing completes.",
+      "owner": "agent/user"
     },
     {
-      "platform": "gitlab_package_registry",
-      "reason": "prepare GitLab project/namespace target",
+      "platform": "open_vsx",
+      "reason": "Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable.",
+      "owner": "user"
+    },
+    {
+      "platform": "conda_forge",
+      "reason": "Conda-forge staged-recipes PR is open and awaiting CI/maintainer review; mark verified only after feedstock or Anaconda package page exists.",
+      "owner": "agent/user"
+    },
+    {
+      "platform": "cran",
+      "reason": "CRAN upload and Step 2 submission were repeated with maintainer email support@seedaud.io; CRAN says submission is not complete until the maintainer confirms the email.",
+      "owner": "agent/user"
+    },
+    {
+      "platform": "flathub",
+      "reason": "Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed.",
       "owner": "agent/user"
     }
   ]
