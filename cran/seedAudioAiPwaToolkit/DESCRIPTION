@@ -2,7 +2,7 @@ Package: seedAudioAiPwaToolkit
 Type: Package
 Title: Metadata Helpers for the Seed Audio AI PWA Toolkit
 Version: 0.1.0
-Authors@R: c(person("Seed Audio AI Site Kit", "contributors", role = c("aut", "cre"), email = "packages@seedaud.io"))
+Authors@R: c(person("Seed Audio AI Site Kit", "contributors", role = c("aut", "cre"), email = "support@seedaud.io"))
 Description: Provides small helpers that return canonical Seed Audio AI
     metadata, text-to-speech URLs, and PWA toolkit file paths for examples,
     documentation, and package ecosystem integrations.
