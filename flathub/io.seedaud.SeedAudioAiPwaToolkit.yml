@@ -1,0 +1,39 @@
+app-id: io.seedaud.SeedAudioAiPwaToolkit
+runtime: org.gnome.Platform
+runtime-version: "47"
+sdk: org.gnome.Sdk
+command: seed-audio-ai-pwa-toolkit
+finish-args:
+  - --share=network
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+modules:
+  - name: seed-audio-ai-pwa-toolkit
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 seed-audio-ai-pwa-toolkit.py /app/bin/seed-audio-ai-pwa-toolkit
+      - install -Dm644 io.seedaud.SeedAudioAiPwaToolkit.desktop /app/share/applications/io.seedaud.SeedAudioAiPwaToolkit.desktop
+      - install -Dm644 io.seedaud.SeedAudioAiPwaToolkit.metainfo.xml /app/share/metainfo/io.seedaud.SeedAudioAiPwaToolkit.metainfo.xml
+      - install -Dm644 icon.svg /app/share/icons/hicolor/scalable/apps/io.seedaud.SeedAudioAiPwaToolkit.svg
+      - install -Dm644 index.html /app/share/seed-audio-ai-pwa-toolkit/index.html
+      - install -Dm644 offline.html /app/share/seed-audio-ai-pwa-toolkit/offline.html
+      - install -Dm644 manifest.webmanifest /app/share/seed-audio-ai-pwa-toolkit/manifest.webmanifest
+      - install -Dm644 sw.js /app/share/seed-audio-ai-pwa-toolkit/sw.js
+    sources:
+      - type: file
+        path: seed-audio-ai-pwa-toolkit.py
+      - type: file
+        path: io.seedaud.SeedAudioAiPwaToolkit.desktop
+      - type: file
+        path: io.seedaud.SeedAudioAiPwaToolkit.metainfo.xml
+      - type: file
+        path: icon.svg
+      - type: file
+        path: index.html
+      - type: file
+        path: offline.html
+      - type: file
+        path: manifest.webmanifest
+      - type: file
+        path: sw.js

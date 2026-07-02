@@ -1,0 +1,56 @@
+{
+  "name": "seed-audio-ai-pwa-toolkit",
+  "displayName": "Seed Audio AI PWA Toolkit",
+  "description": "Open Seed Audio AI text-to-speech and PWA toolkit links from VS Code-compatible editors.",
+  "version": "0.1.0",
+  "publisher": "bbwdadfg",
+  "license": "MIT",
+  "homepage": "https://seedaud.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit"
+  },
+  "bugs": {
+    "url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit/issues"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "seed-audio-ai",
+    "text-to-speech",
+    "pwa"
+  ],
+  "activationEvents": [
+    "onCommand:seedAudioAi.openHomepage",
+    "onCommand:seedAudioAi.openTextToSpeech"
+  ],
+  "main": "./extension.js",
+  "files": [
+    "extension.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "seedAudioAi.openHomepage",
+        "title": "Seed Audio AI: Open Homepage"
+      },
+      {
+        "command": "seedAudioAi.openTextToSpeech",
+        "title": "Seed Audio AI: Open Text to Speech"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.0.0",
+    "ovsx": "^0.10.0"
+  }
+}

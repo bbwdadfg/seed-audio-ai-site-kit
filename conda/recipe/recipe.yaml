@@ -1,0 +1,40 @@
+context:
+  version: 0.1.0
+  build_number: 0
+
+package:
+  name: seed-audio-ai-site-kit
+  version: ${{ version }}
+
+source:
+  - url: https://pypi.org/packages/source/s/seed-audio-ai-site-kit/seed_audio_ai_site_kit-${{ version }}.tar.gz
+    sha256: e68b32868bf391aa065c0903fd271717cfbc0581e6d7777afef042d7e5d780c1
+
+build:
+  number: ${{ build_number }}
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python >=3.8
+    - pip
+    - setuptools >=68
+    - wheel
+  run:
+    - python >=3.8
+
+tests:
+  - python:
+      imports:
+        - seed_audio_ai_site_kit
+      pip_check: true
+  - script:
+      - python -c "from seed_audio_ai_site_kit import SITE, seed_audio_url; assert SITE['homepage'] == 'https://seedaud.io/'; assert seed_audio_url('/text-to-speech/') == 'https://seedaud.io/text-to-speech/'"
+
+about:
+  homepage: https://seedaud.io/
+  repository: https://github.com/bbwdadfg/seed-audio-ai-site-kit
+  documentation: https://github.com/bbwdadfg/seed-audio-ai-site-kit#readme
+  summary: Small unofficial metadata and URL helpers for Seed Audio AI at seedaud.io.
+  license: MIT

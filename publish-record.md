@@ -3,14 +3,19 @@
 - Site: <https://seedaud.io>
 - Source repo: <https://github.com/bbwdadfg/seed-audio-ai-site-kit>
 - Started: 2026-07-02T11:15:00Z
-- Finished: pending Chocolatey review
+- Finished: pending Chocolatey review and conditional platform manual review/OAuth steps
 
 ## Summary
 
 | Status | Count |
 | --- | ---: |
+| blocked_credentials | 1 |
+| blocked_oauth | 1 |
+| blocked_review | 2 |
+| dry_run_passed | 1 |
+| published | 1 |
 | submitted | 1 |
-| verified | 19 |
+| verified | 21 |
 
 ## Published Links
 
@@ -33,22 +38,42 @@
 | cocoapods | `SeedAudioAISiteKit` | `0.1.0` | <https://cocoapods.org/pods/SeedAudioAISiteKit> | CocoaPods public page returned v0.1.0 with homepage, GitHub repo, and README links |
 | luarocks | `seed-audio-ai-site-kit` | `0.1.0-1` | <https://luarocks.org/modules/bbwdadfg/seed-audio-ai-site-kit> | LuaRocks public page returned 0.1.0-1 with homepage link |
 | cpan_metacpan | `Seed-Audio-AI-SiteKit` | `0.1.0` | <https://metacpan.org/release/Seed-Audio-AI-SiteKit> | MetaCPAN API returned Seed-Audio-AI-SiteKit v0.1.0 with homepage and GitHub repository resources |
+| chocolatey | `seed-audio-ai-site-kit` | `0.1.0` | <https://community.chocolatey.org/packages/seed-audio-ai-site-kit> | Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status |
 | github_packages | `@bbwdadfg/seed-audio-ai-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/seed-audio-ai-site-kit> | Unauthenticated GitHub Packages page returned HTTP 200 for the npm package |
 | gitlab_package_registry | `baiwei.chu/seed-audio-ai-site-kit:seed-audio-ai-site-kit` | `0.1.0` | <https://gitlab.com/baiwei.chu/seed-audio-ai-site-kit/-/packages/63344425> | GitLab public project and package pages returned HTTP 200; unauthenticated artifact download SHA256 matched local archive 3dbbe2b4cfbda2374656b4747b629cb7605a739a4810142e4bc7de19943e9e6c |
+| homebrew | `bbwdadfg/tap/seed-audio-ai-pwa-toolkit` | `0.1.0` | <https://github.com/bbwdadfg/homebrew-tap/blob/main/Formula/seed-audio-ai-pwa-toolkit.rb> | brew tap, brew install, brew test, and CLI smoke test returned https://seedaud.io/ for bbwdadfg/tap/seed-audio-ai-pwa-toolkit 0.1.0 |
+| helm_artifact_hub | `seed-audio-ai-pwa-toolkit` | `0.1.0` | <https://github.com/bbwdadfg/seed-audio-ai-pwa-helm-charts> | helm lint/template passed locally; public repo add/update/search/pull/template succeeded from raw GitHub index.yaml version 0.1.0 |
+| ansible_galaxy | `bbwdadfg.seed_audio_ai_pwa_toolkit` | `0.1.0` | <https://galaxy.ansible.com/ui/repo/published/bbwdadfg/seed_audio_ai_pwa_toolkit/> | ansible-galaxy collection build passed; local module call returned Seed Audio AI links; Galaxy publish/import succeeded; public page returned HTTP 200 and API highest_version is 0.1.0. |
 
-## Submitted Or Follow-Up
+## Prepared But Not Public
+
+| Platform | Status | Verification | Reason |
+| --- | --- | --- | --- |
+| cran | `dry_run_passed` | R CMD build succeeded; R CMD check --as-cran completed with 1 NOTE only: New submission. | CRAN upload and maintainer email confirmation were not completed; Chrome extension backend was unavailable for logged-in/manual browser submission. |
+
+## Blocked Or Manual Follow-Up
 
 | Platform | Status | Reason |
 | --- | --- | --- |
-| chocolatey | `submitted` | Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status |
+| helm_artifact_hub | `published` | Artifact Hub repository add/ownership verification requires logged-in browser/OAuth; Chrome extension backend was unavailable in this session. |
+| terraform_registry | `blocked_oauth` | Terraform Registry public module import requires web UI login plus GitHub OAuth/import; Registry API returned 404 before import and Chrome extension backend was unavailable. |
+| open_vsx | `blocked_credentials` | Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable. |
+| conda_forge | `blocked_review` | Conda-forge requires staged-recipes PR and maintainer review. Local rattler build was blocked by conda-forge download TLS EOF, and render-only hit a rattler panic; no PR was opened without a clean local build. |
+| cran | `dry_run_passed` | CRAN upload and maintainer email confirmation were not completed; Chrome extension backend was unavailable for logged-in/manual browser submission. |
+| flathub | `blocked_review` | Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed. |
 
 ## Credential Cleanup
 
 - Tokens were read from macOS Keychain or platform credential stores only at publish time.
-- Temporary npmrc, PAUSE config, Maven settings, GitLab archive staging, and generated package files were removed or avoided.
-- Maven Central used a temporary settings.xml with server id `central`; it was deleted after deploy.
-- GitLab and Chocolatey tokens were used only in request headers/API-key arguments and are not written to records.
+- No secrets are written to records or committed files.
+- Generated build/check directories were removed; generated package archives remain ignored unless they are part of a separate public package repo.
 
 ## Follow-Up Queue
 
-- chocolatey: package is public but Pending automated review; recheck after Chocolatey validation, verification, scan, and moderation finish.
+- chocolatey: Chocolatey package page returned HTTP 200 with Pending automated review, pending validation, pending verification, and pending scan testing status
+- helm_artifact_hub: Artifact Hub repository add/ownership verification requires logged-in browser/OAuth; Chrome extension backend was unavailable in this session.
+- terraform_registry: Terraform Registry public module import requires web UI login plus GitHub OAuth/import; Registry API returned 404 before import and Chrome extension backend was unavailable.
+- open_vsx: Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable.
+- conda_forge: Conda-forge requires staged-recipes PR and maintainer review. Local rattler build was blocked by conda-forge download TLS EOF, and render-only hit a rattler panic; no PR was opened without a clean local build.
+- cran: CRAN upload and maintainer email confirmation were not completed; Chrome extension backend was unavailable for logged-in/manual browser submission.
+- flathub: Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed.

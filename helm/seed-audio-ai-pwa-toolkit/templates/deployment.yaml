@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "seed-audio-ai-pwa-toolkit.fullname" . }}
+  labels:
+    {{- include "seed-audio-ai-pwa-toolkit.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "seed-audio-ai-pwa-toolkit.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        {{- include "seed-audio-ai-pwa-toolkit.labels" . | nindent 8 }}
+    spec:
+      containers:
+        - name: static-site
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 80
+          volumeMounts:
+            - name: pwa-files
+              mountPath: /usr/share/nginx/html
+              readOnly: true
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: pwa-files
+          configMap:
+            name: {{ include "seed-audio-ai-pwa-toolkit.fullname" . }}
+            items:
+              - key: index.html
+                path: index.html
+              - key: offline.html
+                path: offline.html
+              - key: manifest.webmanifest
+                path: manifest.webmanifest
+              - key: sw.js
+                path: sw.js
+              - key: icon.svg
+                path: icons/icon.svg

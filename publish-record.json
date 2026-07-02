@@ -558,6 +558,230 @@
       "notes": [
         "Created public GitLab project under baiwei.chu and uploaded a Generic Package artifact"
       ]
+    },
+    {
+      "platform": "homebrew",
+      "status": "verified",
+      "artifact_type": "homebrew_formula_tap",
+      "automation_level": "automated_tap_publish",
+      "package": "bbwdadfg/tap/seed-audio-ai-pwa-toolkit",
+      "version": "0.1.0",
+      "public_url": "https://github.com/bbwdadfg/homebrew-tap/blob/main/Formula/seed-audio-ai-pwa-toolkit.rb",
+      "repository_url": "https://github.com/bbwdadfg/homebrew-tap",
+      "link_surfaces_verified": [
+        "formula_homepage",
+        "formula_url",
+        "tap_repository"
+      ],
+      "credential_status": "gh_auth_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "homebrew_tap_install_and_test",
+        "result": "brew tap, brew install, brew test, and CLI smoke test returned https://seedaud.io/ for bbwdadfg/tap/seed-audio-ai-pwa-toolkit 0.1.0",
+        "checked_at": "2026-07-02T15:22:48Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Published as a public tap formula, not Homebrew/core."
+      ]
+    },
+    {
+      "platform": "helm_artifact_hub",
+      "status": "published",
+      "artifact_type": "helm_chart",
+      "automation_level": "semi_auto_review",
+      "package": "seed-audio-ai-pwa-toolkit",
+      "version": "0.1.0",
+      "public_url": "https://github.com/bbwdadfg/seed-audio-ai-pwa-helm-charts",
+      "repository_url": "https://raw.githubusercontent.com/bbwdadfg/seed-audio-ai-pwa-helm-charts/main",
+      "link_surfaces_verified": [
+        "Chart.yaml",
+        "README.md",
+        "helm_index_yaml",
+        "chart_repository"
+      ],
+      "credential_status": "gh_auth_used",
+      "blocked_reason": "Artifact Hub repository add/ownership verification requires logged-in browser/OAuth; Chrome extension backend was unavailable in this session.",
+      "verification": {
+        "method": "helm_repo_public_installability",
+        "result": "helm lint/template passed locally; public repo add/update/search/pull/template succeeded from raw GitHub index.yaml version 0.1.0",
+        "checked_at": "2026-07-02T15:22:48Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Chart repository is installable now; Artifact Hub page is pending manual logged-in repository submission or indexing."
+      ]
+    },
+    {
+      "platform": "terraform_registry",
+      "status": "blocked_oauth",
+      "artifact_type": "terraform_module",
+      "automation_level": "semi_auto",
+      "package": "bbwdadfg/seed-audio-ai-pwa-toolkit/null",
+      "version": "v0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/terraform-null-seed-audio-ai-pwa-toolkit",
+      "link_surfaces_verified": [
+        "README.md",
+        "examples",
+        "source_repository"
+      ],
+      "credential_status": "gh_auth_used; hashicorp_token_not_sufficient_for_public_registry_import",
+      "blocked_reason": "Terraform Registry public module import requires web UI login plus GitHub OAuth/import; Registry API returned 404 before import and Chrome extension backend was unavailable.",
+      "verification": {
+        "method": "terraform_validate_and_registry_api_probe",
+        "result": "Public GitHub module repo and tag v0.1.0 are ready; terraform fmt -check, root validate, and example validate passed; registry module API still returned 404.",
+        "checked_at": "2026-07-02T15:22:48Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Ready repo name follows terraform-null-seed-audio-ai-pwa-toolkit convention for provider null."
+      ]
+    },
+    {
+      "platform": "ansible_galaxy",
+      "status": "verified",
+      "artifact_type": "ansible_collection",
+      "automation_level": "automated_with_token",
+      "package": "bbwdadfg.seed_audio_ai_pwa_toolkit",
+      "version": "0.1.0",
+      "public_url": "https://galaxy.ansible.com/ui/repo/published/bbwdadfg/seed_audio_ai_pwa_toolkit/",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "galaxy_yml_homepage",
+        "README.md",
+        "repository",
+        "galaxy_page"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "ansible_galaxy_publish_and_public_api",
+        "result": "ansible-galaxy collection build passed; local module call returned Seed Audio AI links; Galaxy publish/import succeeded; public page returned HTTP 200 and API highest_version is 0.1.0.",
+        "checked_at": "2026-07-02T15:22:48Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "open_vsx",
+      "status": "blocked_credentials",
+      "artifact_type": "vscode_compatible_extension",
+      "automation_level": "semi_auto_review",
+      "package": "bbwdadfg.seed-audio-ai-pwa-toolkit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "package_json_homepage",
+        "repository",
+        "README.md"
+      ],
+      "credential_status": "openvsx_token_missing",
+      "blocked_reason": "Open VSX publish requires a publisher token or logged-in browser flow; Keychain service publish-package-backlinks/openvsx-token is missing and Chrome extension backend was unavailable.",
+      "verification": {
+        "method": "vsix_package_dry_run",
+        "result": "npm test passed and vsce packaged seed-audio-ai-pwa-toolkit-0.1.0.vsix with only LICENSE, extension.js, package.json, and README included.",
+        "checked_at": "2026-07-02T15:22:48Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "VSIX artifact is buildable locally but ignored by git as generated output."
+      ]
+    },
+    {
+      "platform": "conda_forge",
+      "status": "blocked_review",
+      "artifact_type": "conda_recipe",
+      "automation_level": "pr_review",
+      "package": "seed-audio-ai-site-kit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "recipe_home",
+        "source",
+        "pypi_sdist"
+      ],
+      "credential_status": "no_credentials_required_for_local_recipe; github_pr_review_required_for_publish",
+      "blocked_reason": "Conda-forge requires staged-recipes PR and maintainer review. Local rattler build was blocked by conda-forge download TLS EOF, and render-only hit a rattler panic; no PR was opened without a clean local build.",
+      "verification": {
+        "method": "pypi_sdist_and_recipe_preflight",
+        "result": "PyPI sdist version 0.1.0 returned HTTP 200 and sha256 e68b32868bf391aa065c0903fd271717cfbc0581e6d7777afef042d7e5d780c1; conda-build meta.yaml and rattler recipe.yaml were prepared.",
+        "checked_at": "2026-07-02T15:22:48Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Retry rattler build or submit staged-recipes PR after local conda package solving is stable."
+      ]
+    },
+    {
+      "platform": "cran",
+      "status": "dry_run_passed",
+      "artifact_type": "r_package",
+      "automation_level": "manual_review",
+      "package": "seedAudioAiPwaToolkit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "DESCRIPTION_URL",
+        "BugReports",
+        "R_package_docs"
+      ],
+      "credential_status": "no_credentials_required_for_local_check; maintainer_email_confirmation_required_for_submission",
+      "blocked_reason": "CRAN upload and maintainer email confirmation were not completed; Chrome extension backend was unavailable for logged-in/manual browser submission.",
+      "verification": {
+        "method": "R_CMD_check_as_cran",
+        "result": "R CMD build succeeded; R CMD check --as-cran completed with 1 NOTE only: New submission.",
+        "checked_at": "2026-07-02T15:22:48Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "CRAN status should become submitted only after upload and maintainer email confirmation."
+      ]
+    },
+    {
+      "platform": "flathub",
+      "status": "blocked_review",
+      "artifact_type": "desktop_app",
+      "automation_level": "pr_review",
+      "package": "io.seedaud.SeedAudioAiPwaToolkit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/seed-audio-ai-site-kit",
+      "link_surfaces_verified": [
+        "appstream_homepage",
+        "desktop_file",
+        "flatpak_manifest"
+      ],
+      "credential_status": "no_credentials_required_for_local_files; flathub_pr_review_required_for_publish",
+      "blocked_reason": "Flatpak submission requires flatpak-builder/AppStream validation and Flathub PR review. This Mac has no flatpak, flatpak-builder, appstreamcli, or desktop-file-validate installed.",
+      "verification": {
+        "method": "static_manifest_checks",
+        "result": "Prepared a minimal desktop launcher manifest plus desktop/metainfo files; Python launcher compiled, Flatpak YAML parsed, and metainfo XML parsed locally.",
+        "checked_at": "2026-07-02T15:22:48Z"
+      },
+      "cleanup": [
+        "temporary token/config files removed or avoided; no secrets recorded"
+      ],
+      "notes": [
+        "Not submitted to Flathub because build tooling and review path are missing."
+      ]
     }
   ],
   "follow_up": [

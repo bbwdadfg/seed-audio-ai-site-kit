@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Seed Audio AI PWA Toolkit
+Comment=Open Seed Audio AI PWA toolkit metadata and links
+Exec=seed-audio-ai-pwa-toolkit
+Icon=io.seedaud.SeedAudioAiPwaToolkit
+Terminal=false
+Categories=Utility;

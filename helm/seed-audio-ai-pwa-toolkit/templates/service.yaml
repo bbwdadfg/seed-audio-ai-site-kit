@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "seed-audio-ai-pwa-toolkit.fullname" . }}
+  labels:
+    {{- include "seed-audio-ai-pwa-toolkit.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: {{ include "seed-audio-ai-pwa-toolkit.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

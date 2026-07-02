@@ -1,0 +1,14 @@
+Package: seedAudioAiPwaToolkit
+Type: Package
+Title: Metadata Helpers for the Seed Audio AI PWA Toolkit
+Version: 0.1.0
+Authors@R: c(person("Seed Audio AI Site Kit", "contributors", role = c("aut", "cre"), email = "packages@seedaud.io"))
+Description: Provides small helpers that return canonical Seed Audio AI
+    metadata, text-to-speech URLs, and PWA toolkit file paths for examples,
+    documentation, and package ecosystem integrations.
+License: MIT + file LICENSE
+URL: https://seedaud.io/, https://github.com/bbwdadfg/seed-audio-ai-site-kit
+BugReports: https://github.com/bbwdadfg/seed-audio-ai-site-kit/issues
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+NeedsCompilation: no

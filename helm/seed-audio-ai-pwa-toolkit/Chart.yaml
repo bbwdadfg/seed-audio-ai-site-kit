@@ -1,0 +1,23 @@
+apiVersion: v2
+name: seed-audio-ai-pwa-toolkit
+description: Helm chart that serves the Seed Audio AI PWA toolkit as a small static web app.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+home: https://seedaud.io/
+icon: https://raw.githubusercontent.com/bbwdadfg/seed-audio-ai-site-kit/pwa-v0.1.0/pwa/icons/icon.svg
+sources:
+  - https://github.com/bbwdadfg/seed-audio-ai-site-kit
+keywords:
+  - seed-audio-ai
+  - text-to-speech
+  - pwa
+  - static-site
+annotations:
+  artifacthub.io/category: integration-delivery
+  artifacthub.io/license: MIT
+  artifacthub.io/links: |
+    - name: Seed Audio AI
+      url: https://seedaud.io/
+    - name: Text to Speech
+      url: https://seedaud.io/text-to-speech/

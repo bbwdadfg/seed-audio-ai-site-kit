@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "seed-audio-ai-pwa-toolkit.fullname" . }}-test-connection"
+  labels:
+    {{- include "seed-audio-ai-pwa-toolkit.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  restartPolicy: Never
+  containers:
+    - name: wget
+      image: busybox
+      command: ["wget"]
+      args: ["{{ include "seed-audio-ai-pwa-toolkit.fullname" . }}:{{ .Values.service.port }}"]

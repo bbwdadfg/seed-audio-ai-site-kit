@@ -1,0 +1,18 @@
+namespace: bbwdadfg
+name: seed_audio_ai_pwa_toolkit
+version: 0.1.0
+readme: README.md
+authors:
+  - Seed Audio AI
+description: Ansible metadata helper for Seed Audio AI text-to-speech and PWA toolkit links.
+license:
+  - MIT
+tags:
+  - seedaudio
+  - texttospeech
+  - ai
+  - pwa
+  - metadata
+repository: https://github.com/bbwdadfg/seed-audio-ai-site-kit
+homepage: https://seedaud.io/
+issues: https://github.com/bbwdadfg/seed-audio-ai-site-kit/issues

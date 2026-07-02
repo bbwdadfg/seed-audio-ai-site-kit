@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "seed-audio-ai-pwa-toolkit.fullname" . }}
+  labels:
+    {{- include "seed-audio-ai-pwa-toolkit.labels" . | nindent 4 }}
+data:
+  index.html: |
+{{ .Files.Get "files/index.html" | nindent 4 }}
+  offline.html: |
+{{ .Files.Get "files/offline.html" | nindent 4 }}
+  manifest.webmanifest: |
+{{ .Files.Get "files/manifest.webmanifest" | nindent 4 }}
+  sw.js: |
+{{ .Files.Get "files/sw.js" | nindent 4 }}
+  icon.svg: |
+{{ .Files.Get "files/icon.svg" | nindent 4 }}
